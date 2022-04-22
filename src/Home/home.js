@@ -1,9 +1,9 @@
 import '../firebase/firebaseconfig.js';
+import { componentHeader } from '../pages-components/components-js/header.js';
+import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export default () => {
   const containerHome = document.createElement('div');
-  const link = document.getElementById('stylePages');
-  link.href = 'Home/home.css';
   const templateHome = `
   <h1 class='home-title'>Bem-Vindo ao Eco Work Planet</h1>
   <div class='home-main'>
@@ -12,10 +12,14 @@ export default () => {
     <a href="#register" class='link-pages'>Cadastro</a><br>
     <a href="#about" class='link-pages'>Sobre</a><br>
     </div>
- 
   `;
-  containerHome.innerHTML = templateHome;
+
+  containerHome.appendChild(componentHeader());
+  containerHome.innerHTML += templateHome;
+  containerHome.appendChild(componentFooter());
+
+  const link = document.getElementById('stylePages');
+  link.href = 'Home/home.Css';
+
   return containerHome;
 };
-const link = document.getElementById('stylePages'); // Criando o caminho para o Css
-link.href = 'Home/home.Css';

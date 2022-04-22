@@ -1,0 +1,11 @@
+:root{
+  --background-color: #1C232E;
+  --font-family: Sawarabi Gothic;
+  --font-style: normal;
+ --text-color: #dadada;
+ --forms-container:#2F3A4B;
+ --font-title-forms: 2em;
+ --font-name-page:2rem;
+ --background-btns:#3C4A5F;
+ --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

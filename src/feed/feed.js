@@ -2,11 +2,11 @@ import '../firebase/firebaseconfig.js';
 import { addPosts, posts } from '../firebase/firestoreconfig.js';
 import { structuresPost } from './post.js';
 import { sair, authentication } from '../firebase/authentication.js';
+import { componentHeader } from '../pages-components/components-js/header.js';
+import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const timeline = () => {
   const feed = document.createElement('div');
-  const link = document.getElementById('stylePages');
-  link.href = 'feed/feed.Css';
   const templateFeed = `
     <div class='post' >
       <textarea type='text'  class='text-post' data-ls-module='charCounter' maxlength='300' rows='10' placeholder='o que você está pensando?' required></textarea>
@@ -19,12 +19,16 @@ export const timeline = () => {
    
   `;
 
-  feed.innerHTML = templateFeed;
+  feed.appendChild(componentHeader());
+  feed.innerHTML += templateFeed;
+  feed.appendChild(componentFooter());
 
   const message = feed.querySelector('.text-post'); // pegando menssagem do user
   const btnPost = feed.querySelector('.btn-post'); // botão de publicar
   const usersPosts = feed.querySelector('.new-post'); //  novos posts e colocar na lista
   const logout = feed.querySelector('.btn-logout'); // botão para sair
+  const link = document.getElementById('stylePages');
+  link.href = 'feed/feed.css';
 
   btnPost.addEventListener('click', async (e) => {
     // pegar o click para printar o post na tela

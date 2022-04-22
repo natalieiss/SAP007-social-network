@@ -1,7 +1,8 @@
+import { componentHeader } from '../pages-components/components-js/header.js';
+
 export default () => {
-  const container = document.createElement('div');
-  const link = document.getElementById('stylePages');
-  link.href = 'about/about.css';
+  const containerAbout = document.createElement('div');
+
   const template = `
     <div class="text-about">
     <p class="text-about">Sobre a plataforma:</p>
@@ -17,12 +18,16 @@ export default () => {
     
     <picture><img class="developers-img" src="https://avatars.githubusercontent.com/u/91857912?v=4.png" width="60"/></picture>
     <a href="https://github.com/Marione-Tainara" target="_blank"><p class="name">🍀 Marione Pereira - 27 anos - Web Developer</p><a>
-    
-
-              <a href='#home' class="return-home">Voltar a página home</a>
+     <a href='#home' class="return-home">Voltar a página home</a>
 </div>
        
     `;
-  container.innerHTML = template;
-  return container;
+  containerAbout.appendChild(componentHeader());
+
+  containerAbout.innerHTML += template;
+
+  const link = document.getElementById('stylePages');
+  link.href = 'about/about.css';
+
+  return containerAbout;
 };

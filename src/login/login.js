@@ -1,5 +1,7 @@
 import '../firebase/firebaseconfig.js';
 import { signinPassword, googleLogin } from '../firebase/authentication.js';
+import { componentHeader } from '../pages-components/components-js/header.js';
+import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const login = () => {
   const containerLogin = document.createElement('div');
@@ -10,14 +12,17 @@ export const login = () => {
   <input type='email' name='email' class='email-input input-users' placeholder='Insera um e-mail' required /><br>
   <input type='password' name='password' class='password-input input-users'placeholder='Insera uma senha' requerid /><br>
   <a href=''> Esqueceu a sua senha?</a><br>
-  <br><button class='btn-submit'  type='submit'>Entrar</button><br>
-  <button class='btn-google'><img class='logo-google' src='img/google.png' alt='botão Google'>Entrar com o Google
+  <br><button class='btn-submit input-users'  type='submit'>Entrar</button><br>
+  <button class='btn-google input-users'><img class='logo-google' src='img/google.png' alt='botão Google'>Entrar com o Google
   </button><br>
 </form>
 </section>
   <p>Não tem conta? <a href='#register'> Cadastre-se</a></p>
   `;
-  containerLogin.innerHTML = templateLogin;
+  containerLogin.appendChild(componentHeader());
+  containerLogin.innerHTML += templateLogin;
+  containerLogin.appendChild(componentFooter());
+
   const email = containerLogin.querySelector('.email-input');
   const password = containerLogin.querySelector('.password-input');
   const google = containerLogin.querySelector('.btn-google');
