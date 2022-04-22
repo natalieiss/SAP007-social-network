@@ -3,7 +3,7 @@ export function componentFooter() {
   creatingFooter.setAttribute('class', 'style-footer');
 
   const link = document.getElementById('stylePages');
-  link.href = 'Styles/footer.css';
+  link.href = '../pages-components/Styles/footer.css';
 
   const templateFooter = `
 

@@ -1,9 +1,9 @@
 import '../firebase/firebaseconfig.js';
 import { addPosts, posts } from '../firebase/firestoreconfig.js';
-import { structuresPost } from './post.js';
+import { structuresPost } from '../pages-components/components-js/post.js';
 import { sair, authentication } from '../firebase/authentication.js';
-import { componentHeader } from '../pages-components/components-js/header.js';
-import { componentFooter } from '../pages-components/components-js/footer.js';
+import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
+import { componentFooter } from '../pages-components/components-js/footer.js';// importando componente de rodapé
 
 export const timeline = () => {
   const feed = document.createElement('div');

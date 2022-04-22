@@ -1,5 +1,6 @@
-@import "../pages-components/Styles/reset-default.css";
-@import "../pages-components/Styles/Variables.Css";
+@import '../pages-components/Styles/reset-default.css';
+@import '../pages-components/Styles/Variables.Css';
+
 :root {
     --shadow: #2F3A4B;
     --letter: #DADADA;
