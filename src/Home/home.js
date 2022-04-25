@@ -1,6 +1,5 @@
 import '../firebase/firebaseconfig.js';
 import { componentHeader } from '../pages-components/components-js/header.js';
-import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export default () => {
   const containerHome = document.createElement('div');
@@ -16,7 +15,6 @@ export default () => {
 
   containerHome.appendChild(componentHeader());
   containerHome.innerHTML += templateHome;
-  containerHome.appendChild(componentFooter());
 
   const link = document.getElementById('stylePages');
   link.href = 'Home/home.Css';
