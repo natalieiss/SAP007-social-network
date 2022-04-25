@@ -41,6 +41,6 @@ export const getPosts = async () => {
 
   return postsArr;
 };
-export async function deleteDocument(DocRefId) {
-  await deleteDoc(doc(db, 'posts', DocRefId));
+export function deleteDocument(DocRefId) {
+  return deleteDoc(doc(db, 'posts', DocRefId));
 }
