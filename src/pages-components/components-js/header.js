@@ -3,7 +3,7 @@ export function componentHeader() {
   creatingHeader.setAttribute('class', 'style-header');
 
   const link = document.getElementById('stylePages');
-  link.href = 'src/pages-componentes/Styles/header.css';
+  link.href = 'pages-components/Styles/header.css';
 
   const templateHeader = `
  

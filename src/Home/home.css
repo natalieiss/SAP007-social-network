@@ -1,22 +1,31 @@
 @import '../pages-components/Styles/reset-default.css';
 @import '../pages-components/Styles/Variables.Css';
 
+
+
 body {
-  background-color: var(--background-color);
-  font-family: var(--font-family);
-  font-style: var(--font-style);
+  background:var(--background-color);
 }
 
 #root {
   width: 100vw;
   height: 100vh;
 }
+
+img.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+
+}
+
 .home-main {
   width: 90%;
   height: 89%;
   margin: auto;
   margin-top: 1.5rem;
-  background: #2F3A4B;
+  background: var(--shadow);
   border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
@@ -44,22 +53,69 @@ body {
   font-size: 1rem;
   text-align: center;
   line-height: 2rem;
-  color: #ffffff;
+  color: var(--font-color);
 }
 
+.name-page {
+  font-size: 2rem;
+  text-align: center;
+  color:var(--font-color);
+  width: 100%;
+  height: 3.3rem;
+
+}
 
 video {
-  width: 20%;
+  width: 90%;
   margin: 1rem;
 
 }
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--font-color);
+  margin: 34% 7% 8% 5%;
+  /* top left bottom right*/
+
+}
+
+a {
+  text-decoration: none;
+  color:var(--font-color);
+}
+
+@media (max-width:600px) {
+  .name-page {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (min-width:500px) and (max-width:600px) {
+  .footer {
+    margin: 45% 7% 8% 5%;
+  }
+}
+
 @media (min-width:601px) and (max-width:768px) {
+  .footer {
+    font-size: 1.5rem;
+    margin: 50% 9% 10% 7%;
+    text-align: center;
+  }
+
   .home-title {
     font-size: 1.7rem;
   }
 }
 
 @media (min-width:769px) and (max-width:1000px) {
+  .footer {
+    font-size: 1.5rem;
+    margin: 56% 9% 9% 5%;
+  }
+
   video {
     width: 75%;
     margin: 8rem;
@@ -74,6 +130,11 @@ video {
   .home-main {
     width: 68%;
     height: 165rem;
+  }
+
+  .footer {
+    font-size: 3rem;
+    margin: 98% 0% 9% 0%;
   }
 
   #root {
@@ -98,5 +159,13 @@ video {
 }.home-title {
   font-size: 3rem;
   margin-bottom: 4rem;
+}
+.name-page {
+  font-size: 8rem;
+  width: 100%;
+  height: 10.3rem;
+}img.logo {
+  margin-top: 16rem;
+  height: 12rem;
 }
 }

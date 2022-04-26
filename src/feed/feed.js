@@ -1,14 +1,14 @@
 import '../firebase/firebaseconfig.js';
 import { addPosts, getPosts } from '../firebase/firestoreconfig.js';
 import { structuresPost } from '../pages-components/components-js/post.js';
-import { sair, authentication } from '../firebase/authentication.js';
+import { sair, authentication } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
 
 export const timeline = () => {
   const feed = document.createElement('div');
   const templateFeed = `
     <div class='post' >
-      <textarea type='text'  class='text-post' maxlength='300' rows='10' placeholder='o que você está pensando?' required></textarea>
+      <textarea type='text'  class='text-post'  maxlength='300' rows='10' placeholder='o que você está pensando?' required></textarea>
       <button  class='btn-post'>Postar</button>
     </div>
   

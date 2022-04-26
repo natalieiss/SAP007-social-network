@@ -1,4 +1,4 @@
-import { authentication } from '../../firebase/authentication.js';
+import { authentication } from '../../firebase/firebaseauth.js';
 import { deleteDocument } from '../../firebase/firestoreconfig.js';
 
 export function structuresPost(item) {
@@ -23,7 +23,7 @@ export function structuresPost(item) {
         <div class='information-organization'>
           <p>${item.date}</p>
         </div>
-        <p>${item.message}</p>
+        <textarea type='text'disabled>${item.message}</textarea>
         
         </div>
         <div class='like-container'>

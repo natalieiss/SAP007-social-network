@@ -1,5 +1,5 @@
 import '../firebase/firebaseconfig.js';
-import { creatNewUser } from '../firebase/authentication.js';
+import { creatNewUser } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js';
 
 export const register = () => {
@@ -45,8 +45,19 @@ export const register = () => {
           window.location.hash = '#timeline'; // caso de certo vai pra hash
         })
         .catch((error) => {
-          const errorMessage = error.message;
-          console.log(errorMessage, 'erro'); // caso contrario erro
+          const Termos = containerRegister.querySelector('#MenssagemDeErro');
+          const errorCode = error.code;
+          switch (errorCode) {
+            case 'auth/weak-password':
+              Termos.innerHTML = 'Senha com menos de 6 Digitos';
+
+              break;
+            case 'auth/email-already-in-use':
+              Termos.innerHTML = 'E-mail em uso';
+
+              break;
+            default:
+          }
         });
     } else {
       const Termos = containerRegister.querySelector('#MenssagemDeErro');
