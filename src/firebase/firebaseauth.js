@@ -4,6 +4,8 @@ import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  // sendEmailVerification,
+  sendPasswordResetEmail,
   onAuthStateChanged,
   signOut,
   // eslint-disable-next-line import/no-unresolved
@@ -21,8 +23,14 @@ export function creatNewUser(email, password) {
   );
 }
 
+export const resetaPassword = (email) => {
+  sendPasswordResetEmail(authentication, email);
+};
+
 // entrar com email e senha
 export function signinPassword(email, password) {
+  // sendEmailVerification(auth.currentUser);
+
   return signInWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;

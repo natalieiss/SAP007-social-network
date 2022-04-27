@@ -3,7 +3,6 @@ import { addPosts, getPosts } from '../firebase/firestoreconfig.js';
 import { structuresPost } from '../pages-components/components-js/post.js';
 import { sair, authentication } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
-
 import { componentFooter } from '../footer.js';
 
 export const timeline = () => {
