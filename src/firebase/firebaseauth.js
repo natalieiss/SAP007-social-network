@@ -22,6 +22,7 @@ export function creatNewUser(email, password) {
     }
   );
 }
+
 export const resetaPassword = (email) => {
   sendPasswordResetEmail(authentication, email);
 };
@@ -29,6 +30,7 @@ export const resetaPassword = (email) => {
 // entrar com email e senha
 export function signinPassword(email, password) {
   // sendEmailVerification(auth.currentUser);
+
   return signInWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;
@@ -48,11 +50,11 @@ export function googleLogin() {
 export function stateVerification(cb) {
   onAuthStateChanged(authentication, (user) => {
     cb(user != null); // function de sair veio do firebase
-  });
+  }); //se tiver conectada é direcionada para o feed
 }
 //função sair
 export function sair() {
   return signOut(authentication)
-    .then(() => 'sair')
+    .then(() => 'sair') //volta para a home
     .catch((error) => error);
 }
