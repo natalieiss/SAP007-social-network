@@ -4,7 +4,9 @@ import {
   addDoc, // adiconar documentos na coleção
   getDocs, // pegar documentos da coleção
   orderBy, // ordenar por algum parâmetro
-  query, // consultar
+  query,
+  deleteDoc,
+  doc,
 
   // eslint-disable-next-line import/no-unresolved
 } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js';
@@ -27,12 +29,11 @@ export async function addPosts(message, userEmail) {
     return null;
   }
 }
-export const posts = async () => {
+export const getPosts = async () => {
   const postsArr = [];
-  const sortingByDate = query(collection(db, 'posts'), orderBy('date')); // ordenar por data os posts
-  // eslint-disable-next-line max-len
-  const querySnapshot = await getDocs(sortingByDate); // tira um print da coleção da ordem mais recente
-  querySnapshot.forEach((item) => { // do firestore
+  const sortingByDate = query(collection(db, 'posts'), orderBy('date'));
+  const querySnapshot = await getDocs(sortingByDate);
+  querySnapshot.forEach((item) => {
     const pageFeed = item.data();
     pageFeed.id = item.id;
     postsArr.push(pageFeed);
@@ -40,3 +41,6 @@ export const posts = async () => {
 
   return postsArr;
 };
+export function deleteDocument(DocRefId) {
+  return deleteDoc(doc(db, 'posts', DocRefId));
+}

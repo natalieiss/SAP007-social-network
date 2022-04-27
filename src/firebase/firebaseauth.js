@@ -44,6 +44,7 @@ export function stateVerification(cb) {
     cb(user != null); // function de sair veio do firebase
   }); //se tiver conectada é direcionada para o feed
 }
+//função sair
 export function sair() {
   return signOut(authentication)
     .then(() => 'sair') //volta para a home
