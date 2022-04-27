@@ -4,7 +4,7 @@ import home from '../Home/home.js';
 import { register } from '../register/register.js';
 import { login } from '../login/login.js';
 import { timeline } from '../feed/feed.js';
-import { stateVerification } from '../firebase/authentication.js';
+import { stateVerification } from '../firebase/firebaseauth.js';
 
 const main = document.querySelector('#root'); // pega a div do HTML para colocar o conteúdo da página
 const renderizar = () => {

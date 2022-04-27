@@ -1,36 +1,36 @@
 import '../firebase/firebaseconfig.js';
-import { addPosts, posts } from '../firebase/firestoreconfig.js';
-import { structuresPost } from './post.js';
-import { sair, authentication } from '../firebase/authentication.js';
+import { addPosts, getPosts } from '../firebase/firestoreconfig.js';
+import { structuresPost } from '../pages-components/components-js/post.js';
+import { sair, authentication } from '../firebase/firebaseauth.js';
+import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
 
 export const timeline = () => {
   const feed = document.createElement('div');
-  const link = document.getElementById('stylePages');
-  link.href = 'feed/feed.Css';
   const templateFeed = `
     <div class='post' >
-      <textarea type='text'  class='text-post' data-ls-module='charCounter' maxlength='300' rows='10' placeholder='o que você está pensando?' required></textarea>
-      <button type='submit' class='btn-post'>Postar</button>
+      <textarea type='text'  class='text-post'  maxlength='300' rows='10' placeholder='o que você está pensando?' required></textarea>
+      <button  class='btn-post'>Postar</button>
     </div>
   
     <button class='btn-logout'>sair</button>
-    <ul class='new-post'></ul>
-    <ul  id= 'all-post' class='all-posts'></ul>
+    <ul  id='new-post' class='new-post'></ul>
+    <ul  id='all-post' class='all-posts'></ul>
    
   `;
 
-  feed.innerHTML = templateFeed;
+  feed.appendChild(componentHeader());
+  feed.innerHTML += templateFeed;
 
   const message = feed.querySelector('.text-post'); // pegando menssagem do user
   const btnPost = feed.querySelector('.btn-post'); // botão de publicar
   const usersPosts = feed.querySelector('.new-post'); //  novos posts e colocar na lista
   const logout = feed.querySelector('.btn-logout'); // botão para sair
+  const link = document.getElementById('stylePages');
+  link.href = 'feed/feed.css';
 
   btnPost.addEventListener('click', async (e) => {
     // pegar o click para printar o post na tela
     e.preventDefault();
-    // eslint-disable-next-line max-len
-    /*  veio das config firestore, function para  pegar a menssagem do usuário (recebe parâmetro de message, userEmail) */
     addPosts(message.value, authentication.currentUser.email).then((id) => {
       // functicon pronta
       const date = new Date().toLocaleString('pt-br'); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -44,14 +44,13 @@ export const timeline = () => {
       message.value = '';
     });
   });
-  const userPosts = feed.querySelector('#all-posts'); // section guardar todos os posts
+  const timelineSection = feed.querySelector('.all-posts'); // section guardar todos os posts
 
   const showingAllPosts = async () => {
-    // mostrar posts na tela (do banco)
-    const todosPosts = await posts(); // function vindo do config
-    todosPosts.forEach((item) => { // passa pelos elementos do posts
-      const infoOfPots = structuresPost(item); // pegando os items do post
-      userPosts.prepend(infoOfPots); // incluindo um filho na lista 'os velhos'
+    const allPosts = await getPosts();
+    allPosts.forEach((item) => {
+      const infoOfPots = structuresPost(item);
+      timelineSection.prepend(infoOfPots);
     });
   };
   // função para o pessoa sair
