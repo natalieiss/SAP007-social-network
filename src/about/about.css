@@ -13,14 +13,14 @@ body {
 }
 
 div .text-about{
-  width: fit-content;
-  border-width: medium;
-  border-color: transparent;
-  background-color: var(--menu);
-  margin: 50px;
-  justify-content: center;
-  border-radius: 5px;
-  display: flex;
+    width: fit-content;
+    border-width: medium;
+    border-color: transparent;
+    background-color: var(--menu);
+    margin: 50px;
+    justify-content: center;
+    border-radius: 5px;
+    display: flex;
 }
 
 .text-about {

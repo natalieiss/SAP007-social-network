@@ -7,6 +7,8 @@ import { componentHeader } from '../pages-components/components-js/header.js'; /
 export const timeline = () => {
   const feed = document.createElement('div');
   const templateFeed = `
+  <body>
+   <section>
     <div class='post' >
       <textarea type='text'  class='text-post'  maxlength='300' rows='10' placeholder='o que você está pensando?' required></textarea>
       <button  class='btn-post'>Postar</button>
