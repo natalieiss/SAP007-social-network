@@ -3,6 +3,8 @@ import { addPosts, posts } from '../firebase/firestoreconfig.js';
 import { structuresPost } from './post.js';
 import { sair, authentication } from '../firebase/authentication.js';
 
+import { componentFooter } from '../footer.js';
+
 export const timeline = () => {
   const feed = document.createElement('div');
   const link = document.getElementById('stylePages');
