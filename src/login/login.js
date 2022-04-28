@@ -1,6 +1,7 @@
 import '../firebase/firebaseconfig.js';
 import { signinPassword, googleLogin } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js';
+import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const login = () => {
   const containerLogin = document.createElement('div');
@@ -22,6 +23,7 @@ export const login = () => {
   `;
   containerLogin.appendChild(componentHeader());
   containerLogin.innerHTML += templateLogin;
+  containerLogin.appendChild(componentFooter());
 
   const email = containerLogin.querySelector('.email-input');
   const password = containerLogin.querySelector('.password-input');

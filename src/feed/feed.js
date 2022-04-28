@@ -3,7 +3,7 @@ import { addPosts, getPosts } from '../firebase/firestoreconfig.js';
 import { structuresPost } from '../pages-components/components-js/post.js';
 import { sair, authentication } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
-import { componentFooter } from '../footer.js';
+import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const timeline = () => {
   const feed = document.createElement('div');
@@ -23,6 +23,7 @@ export const timeline = () => {
 
   feed.appendChild(componentHeader());
   feed.innerHTML += templateFeed;
+  feed.appendChild(componentFooter());
 
   const message = feed.querySelector('.text-post'); // pegando menssagem do user
   const btnPost = feed.querySelector('.btn-post'); // botão de publicar
