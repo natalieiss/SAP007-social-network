@@ -14,7 +14,7 @@ export const timeline = () => {
   <div> <button id='btn-logout' class='btn-logout'>sair</button></div>
   <span id="feedback" class='feedback'></span>
     <div class='area-post'>
-      <textarea  class='text-post'  maxlength='300' rows='10' placeholder='o que você está pensando?'></textarea>
+      <textarea  class='message'  maxlength='300' rows='10' placeholder='o que você está pensando?'></textarea>
       </div>
       <div class='btn-publicar'>
       <button  id='btn-post' class='btn-post'>Postar</button>
@@ -33,7 +33,7 @@ export const timeline = () => {
   const link = document.getElementById('stylePages');
   link.href = 'feed/feed.css';
   const logout = feed.querySelector('.btn-logout'); // botão para sair
-  const message = feed.querySelector('.text-post'); // pegando menssagem do user
+  const message = feed.querySelector('.message'); // pegando menssagem do user
   const btnPost = feed.querySelector('.btn-post'); // botão de publicar
   const newPosts = feed.querySelector('.new-post'); //  novos posts e colocar na lista
   const feedbackError = feed.querySelector('#feedback');
