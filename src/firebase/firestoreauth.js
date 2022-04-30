@@ -7,7 +7,9 @@ import {
   query,
   deleteDoc,
   doc,
-
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
   // eslint-disable-next-line import/no-unresolved
 } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js';
 
@@ -21,6 +23,7 @@ export async function addPosts(message, userEmail) {
       message,
       userEmail,
       date: new Date().toLocaleString('pt-br'), // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+      like: [],
     });
     console.log('Document written with ID: ', docRef.id); // do firestore
     return docRef.id;
@@ -41,6 +44,32 @@ export const getPosts = async () => {
 
   return postsArr;
 };
-export function deleteDocument(DocRefId) {
-  return deleteDoc(doc(db, 'posts', DocRefId));
+export function deleteDocument(itemId) {
+  return deleteDoc(doc(db, 'posts', itemId));
+}
+export function updateDocument(itemId, message) {
+  const docRefId = doc(db, 'posts', itemId);
+  return updateDoc(docRefId, {
+    message,
+  });
+}
+export async function liked(itemId, userEmail) {
+  try {
+    const postId = doc(db, 'posts', itemId);
+    return await updateDoc(postId, {
+      likes: arrayUnion(userEmail),
+    });
+  } catch (e) {
+    return console.log('Ocorreu algo de errado', e);
+  }
+}
+export async function unlike(itemId, userEmail) {
+  try {
+    const postId = doc(db, 'posts', itemId);
+    return await updateDoc(postId, {
+      likes: arrayRemove(userEmail),
+    });
+  } catch (e) {
+    return console.log('Não deu certo o like', e);
+  }
 }
