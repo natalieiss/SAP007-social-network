@@ -1,6 +1,7 @@
 import '../firebase/firebaseconfig.js';
 import { creatNewUser } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js';
+import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const register = () => {
   const containerRegister = document.createElement('div'); // criando uma div para inserir o conteúdo na tela
@@ -31,6 +32,7 @@ export const register = () => {
  `;
   containerRegister.appendChild(componentHeader());
   containerRegister.innerHTML += templateRegister;
+  containerRegister.appendChild(componentFooter());
 
   const email = containerRegister.querySelector('.email'); // pegando valor do e-mail
   const password = containerRegister.querySelector('.password'); // pegando valor do password
