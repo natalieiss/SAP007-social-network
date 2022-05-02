@@ -50,11 +50,28 @@ export function googleLogin() {
 export function stateVerification(cb) {
   onAuthStateChanged(authentication, (user) => {
     cb(user != null); // function de sair veio do firebase
-  }); //se tiver conectada é direcionada para o feed
+  }); // se tiver conectada é direcionada para o feed
 }
-//função sair
+// função sair
 export function sair() {
   return signOut(authentication)
-    .then(() => 'sair') //volta para a home
+    .then(() => 'sair') // volta para a home
     .catch((error) => error);
 }
+// export function userData() {
+//   const auth = getAuth();
+//   const user = auth.currentUser;
+
+//   return user || localStorage.getItem('userEmail');
+// }
+
+// export function userData() {
+//   const email = localStorage.getItem('userEmail');
+//   if (!email) {
+//     return null;
+//   }
+//   const user = {
+//     email,
+//   };
+//   return user;
+// }

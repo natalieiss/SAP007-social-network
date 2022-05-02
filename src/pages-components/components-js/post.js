@@ -1,13 +1,16 @@
+/* eslint-disable max-len */
 import { authentication } from '../../firebase/firebaseauth.js';
-// import { liked, unlike } from '../../firebase/firestoreauth.js';
+import { liked, unliked } from '../../firebase/firestoreauth.js';
 import { editPub, delPub } from './changes-posts.js';
 
 export function structuresPost(item) {
+  const gettingUserEmail = authentication.currentUser;
+  // let likesPost = item.like;
   const containerPost = document.createElement('div');
   const checksUser = item.userEmail === authentication.currentUser.email;
   // componente para pegar as informações de quem postou
   const templatePosts = `
-  <div class="post-div">
+    <div class="post-div">
   <div>
   ${
     checksUser
@@ -28,13 +31,11 @@ export function structuresPost(item) {
         item.message
       }</textarea>
         <div class="div-likes">
-        <button id="btn-like" class="button-like"><img class="like-icon" src="./img/amor-verde.png"/><p id="likes" class="likes">${
-          item.like.length
-        }</p>
-        </button>
+       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/amor-verde.png"/></button><p id="like" class="likes">${
+         item.likes.length
+       }</p>
         </div>
 </div>`;
-
   containerPost.innerHTML = templatePosts;
   if (checksUser) {
     const deletePost = containerPost.querySelector('#btn-delete');
@@ -52,5 +53,43 @@ export function structuresPost(item) {
       containerPost.appendChild(editPub(item, containerPost)); // trás o texto para editar
     });
   }
+
+  const btnlikes = containerPost.querySelector('.btn-like');
+  const quantityLikes = containerPost.querySelector('#like');
+  let arrOflikes = item.likes.length;
+
+  btnlikes.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (!item.likes.includes(gettingUserEmail.uid)) {
+      // se o usuário não tiver dado o like ele pode // ou seja limita o numero de likes por user a 1
+      liked(item.id, gettingUserEmail.uid); // ta pegando o ID da Pub e ID do user
+      item.likes.push(gettingUserEmail.uid); // pega o item(likes)/array da coleção
+      arrOflikes += 1; // trás o array com o novo valor quando o user clica
+      quantityLikes.textContent = arrOflikes; // printa o valor quantidade
+    } else {
+      const unlikedUser = item.likes.indexOf(gettingUserEmail); // PEGA  O 1ª ITEM DO ARRAY
+      unliked(item.id, gettingUserEmail.uid);
+      item.likes.splice(unlikedUser, 1); // O método splice() altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+      arrOflikes -= 1; // SE COLOCAR MENOS -1 OU INVÉS DE = -1 O VALOR FICA NEGATIVO
+      quantityLikes.textContent = arrOflikes;
+    }
+  });
+  // btnlikes.addEventListener('click', async () => {
+  //   const itemLike = item.likes;
+  //   if (!itemLike.includes(gettingUserEmail)) {
+  //     liked(item.id, gettingUserEmail).then(() => {
+  //       itemLike.push(gettingUserEmail);
+  //       const sumLiked = Number(quantityLikes.innerHTML) + 1;
+  //       quantityLikes.innerHTML = sumLiked;
+  //     });
+  //   } else {
+  //     unliked(item.id, gettingUserEmail).then(() => {
+  //       itemLike.splice(gettingUserEmail);
+  //       const sumLiked = Number(quantityLikes.innerHTML) - 1;
+  //       quantityLikes.innerHTML = sumLiked;
+  //     });
+  //   }
+  // });
+
   return containerPost;
 }
