@@ -54,7 +54,7 @@ export const timeline = () => {
           message: message.value, // pega valor da menssagem
           date, // o horario e data
           id,
-          like: [],
+          likes: [],
         };
         newPosts.prepend(structuresPost(item)); // https://www.youtube.com/watch?v=mAfeyy2bLzI
         message.value = '';
