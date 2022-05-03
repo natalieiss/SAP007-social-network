@@ -1,16 +1,12 @@
+
 *{
   padding: 0;
   margin: 0;
 }
 
-/* notfound.CSS*/
-*{
-  padding: 0;
-  margin: 0;
-}
 body {
   background: #1C232E;
-  font-family: Sawarabi Gothic;
+  font-family: var(--main-font);
   font-style: normal;
   color: #dadada;
 }

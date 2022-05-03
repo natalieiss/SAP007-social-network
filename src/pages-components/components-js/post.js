@@ -12,15 +12,14 @@ export function structuresPost(item) {
   const templatePosts = `
     <div class="post-div">
   <div>
-  ${
-    checksUser
-      ? `
+  ${checksUser
+    ? `
   <div class="btns">
   <button id="btn-edit" class="btn-edit">Editar</button>
   <button id="btn-delete" class="btn-del"><img class="icon-bin" src="./img/delete.png">Excluir</button>
   </div>`
-      : ''
-  }
+    : ''
+}
   <div class="user-info">
       <p class="user-email">${item.userEmail}</p>
       </div>
@@ -28,12 +27,12 @@ export function structuresPost(item) {
       <p class="info-date">${item.date}</p>
     </div>
       <textarea id="message" class='message' maxlength="200" disabled>${
-        item.message
-      }</textarea>
+  item.message
+}</textarea>
         <div class="div-likes">
        <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/amor-verde.png"/></button><p id="like" class="likes">${
-         item.likes.length
-       }</p>
+  item.likes.length
+}</p>
         </div>
 </div>`;
   containerPost.innerHTML = templatePosts;
@@ -74,22 +73,5 @@ export function structuresPost(item) {
       quantityLikes.textContent = arrOflikes;
     }
   });
-  // btnlikes.addEventListener('click', async () => {
-  //   const itemLike = item.likes;
-  //   if (!itemLike.includes(gettingUserEmail)) {
-  //     liked(item.id, gettingUserEmail).then(() => {
-  //       itemLike.push(gettingUserEmail);
-  //       const sumLiked = Number(quantityLikes.innerHTML) + 1;
-  //       quantityLikes.innerHTML = sumLiked;
-  //     });
-  //   } else {
-  //     unliked(item.id, gettingUserEmail).then(() => {
-  //       itemLike.splice(gettingUserEmail);
-  //       const sumLiked = Number(quantityLikes.innerHTML) - 1;
-  //       quantityLikes.innerHTML = sumLiked;
-  //     });
-  //   }
-  // });
-
   return containerPost;
 }
