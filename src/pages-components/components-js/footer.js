@@ -17,13 +17,3 @@ export function componentFooter() {
   createFooter.innerHTML = templateFooter;
   return createFooter;
 }
-
-
-// var redFooter = document.createElement("id");
-//  redFooter.setAttribute("id", "page-footer");
-//  redFooter.setAttribute("style", "color: red;"); 
-//  var section = document.getElementById("header"); 
-//  section.appendChild(redFooter); 
-//  var redFooter = document.getElementByClass("page-footer");
-//  var newParagraph = "This is a new red paragraph";
-//  redFooter.innerHTML = newParagraph;

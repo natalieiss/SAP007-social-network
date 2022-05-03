@@ -8,8 +8,7 @@ import {
   sendPasswordResetEmail,
   onAuthStateChanged,
   signOut,
-  // eslint-disable-next-line import/no-unresolved
-} from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js';
+} from './export.js';
 
 const provider = new GoogleAuthProvider();
 export const authentication = getAuth();
@@ -19,7 +18,7 @@ export function creatNewUser(email, password) {
     (userCredential) => {
       const user = userCredential.user;
       return user;
-    }
+    },
   );
 }
 
@@ -35,7 +34,7 @@ export function signinPassword(email, password) {
     (userCredential) => {
       const user = userCredential.user;
       return user;
-    }
+    },
   );
 }
 // entrar com o Google

@@ -12,6 +12,13 @@ body {
   color: var(--letter);
 }
 
+.text-about {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 div .text-about{
     width: fit-content;
     border-width: medium;
@@ -23,11 +30,6 @@ div .text-about{
     display: flex;
 }
 
-.text-about {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .developers-img {
   width: 100px;
@@ -39,12 +41,7 @@ div .text-about{
 }
 
 .name {
-  display: inline-block;
   vertical-align: top;
   display: flex;
 }
 
-
-@media (min-width:500px) and (max-width:600px) {}
-
-@media (min-width: 601px) and (max-width:767px) {}
