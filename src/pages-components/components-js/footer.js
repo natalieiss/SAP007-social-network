@@ -2,9 +2,6 @@ export function componentFooter() {
   const createFooter = document.createElement('p');
   createFooter.setAttribute('class', 'style-footer');
 
-  const link = document.getElementById('stylePages');
-  link.href = 'src/pages-componentes/Styles/footer.css';
-
   const templateFooter = `
   ©Created by
   <a href="https://github.com/KarinaMel0" target="_blank"> Karina Mel</a>
@@ -15,5 +12,8 @@ export function componentFooter() {
   >|Natalie Silva</a>
   `;
   createFooter.innerHTML = templateFooter;
+
+  const link = document.getElementById('stylePages');
+  link.href = 'src/pages-componentes/Styles/footer.css';
   return createFooter;
 }

@@ -4,11 +4,11 @@ export {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
-  // sendEmailVerification,
-  sendPasswordResetEmail,
   onAuthStateChanged,
   signOut,
 } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'; //eslint-disable-line
+
+export { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js'; //eslint-disable-line
 
 export {
   getFirestore, // para usar os recursos do firestore
@@ -22,4 +22,5 @@ export {
   updateDoc,
   arrayUnion,
   arrayRemove,
-} from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js'; //eslint-disable-line
+} from // eslint-disable-next-line import/no-unresolved
+  'https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js';
