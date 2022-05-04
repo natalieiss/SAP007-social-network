@@ -5,15 +5,16 @@
 - [1. Introdução](#1-introdução)
 - [2. Resumo do projeto](#2-resumo-do-projeto)
 - [3.Pesquisa de usuários](#3-pesquisa-de-usuários)
-- [4. Objetivos de aprendizagem](#4-objetivos-de-aprendizagem)
-- [5.Histórias de usuário](#5.histórias-de-usuário)
+- [4.Histórias de usuário](#4.histórias-de-usuário)
+- [5. Objetivos de aprendizagem](#5-objetivos-de-aprendizagem)
 - [6.Design](#6-Design)
 - [7. Linguagens e ferramentas utilizadas ](#7-Linguagens-e-ferramentas-utilizadas)
 - [8. Desenvolvedoras](#8-desenvolvedoras)
 
 ## 1. Introdução
 
-3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, construindo uma [Single-page
+
+3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page
 Application
 (SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)
 [_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
@@ -70,7 +71,13 @@ A informação de como podemos cuidar do nosso Meio-Ambiente chega fácil até v
 
 ---
 
-## 4. Objetivos de aprendizagem
+## 4.Histórias de usuário
+Com base nas pesquisas chegamos nas seguintes histórias de usuários:
+
+![histórias](./src/img/img-readme/historias.png)
+---
+
+## 3. Objetivos de aprendizagem
 
 ### HTML
 
@@ -160,19 +167,19 @@ A informação de como podemos cuidar do nosso Meio-Ambiente chega fácil até v
 
 ---
 
-## 5.Histórias de usuário
 
----
 
 ## 6. Design
 
----
+
 
 ## Desenho de interface do usuário
 
 ### Protótipo de baixa fidelidade
 
-## 7. 💻Linguagens e ferramentas utilizadas
+
+---
+### 7. 💻Linguagens e ferramentas utilizadas
 
 <article>
 <img align="center"  alt="VScode" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg">
