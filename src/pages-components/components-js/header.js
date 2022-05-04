@@ -1,10 +1,6 @@
 export function componentHeader() {
   const creatingHeader = document.createElement('header');
   creatingHeader.setAttribute('class', 'style-header');
-
-  const link = document.getElementById('stylePages');
-  link.href = 'pages-components/Styles/header.css';
-
   const templateHeader = `
  
  <img
@@ -16,5 +12,8 @@ export function componentHeader() {
  
   `;
   creatingHeader.innerHTML = templateHeader;
+
+  const link = document.getElementById('stylePages');
+  link.href = 'pages-components/Styles/header.css';
   return creatingHeader;
 }

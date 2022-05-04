@@ -4,8 +4,6 @@ import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
-  // sendEmailVerification,
-  sendPasswordResetEmail,
   onAuthStateChanged,
   signOut,
 } from './export.js';
@@ -21,10 +19,6 @@ export function creatNewUser(email, password) {
     },
   );
 }
-
-export const resetaPassword = (email) => {
-  sendPasswordResetEmail(authentication, email);
-};
 
 // entrar com email e senha
 export function signinPassword(email, password) {
@@ -57,20 +51,3 @@ export function sair() {
     .then(() => 'sair') // volta para a home
     .catch((error) => error);
 }
-// export function userData() {
-//   const auth = getAuth();
-//   const user = auth.currentUser;
-
-//   return user || localStorage.getItem('userEmail');
-// }
-
-// export function userData() {
-//   const email = localStorage.getItem('userEmail');
-//   if (!email) {
-//     return null;
-//   }
-//   const user = {
-//     email,
-//   };
-//   return user;
-// }

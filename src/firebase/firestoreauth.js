@@ -10,6 +10,7 @@ import {
   updateDoc,
   arrayUnion,
   arrayRemove,
+  // eslint-disable-next-line import/no-unresolved
 } from './export.js';
 
 export const db = getFirestore(); // do firestore
