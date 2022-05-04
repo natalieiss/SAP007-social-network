@@ -13,7 +13,7 @@ export function componentHeader() {
   `;
   creatingHeader.innerHTML = templateHeader;
 
-  const link = document.getElementById('stylePages');
-  link.href = 'pages-components/Styles/header.css';
+  // const link = document.getElementById('stylePages');
+  // link.href = 'pages-components/Styles/header.css';
   return creatingHeader;
 }

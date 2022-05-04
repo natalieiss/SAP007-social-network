@@ -31,13 +31,15 @@ export const register = () => {
     </form>
  `;
   containerRegister.appendChild(componentHeader());
+
   containerRegister.innerHTML += templateRegister;
+
   containerRegister.appendChild(componentFooter());
 
   const email = containerRegister.querySelector('.email'); // pegando valor do e-mail
   const password = containerRegister.querySelector('.password'); // pegando valor do password
-  const link = document.getElementById('stylePages'); // Criando o caminho para o Css
-  link.href = 'register/register.Css';
+  // const link = document.getElementById('stylePages'); // Criando o caminho para o Css
+  // link.href = 'register/register.Css';
 
   containerRegister.addEventListener('submit', (e) => {
     e.preventDefault();

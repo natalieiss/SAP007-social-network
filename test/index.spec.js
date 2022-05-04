@@ -16,18 +16,19 @@ describe('creatNewUser', () => {
 
 // eslint-disable-next-line jest/no-identical-title
 describe('creatNewUser', () => {
-  it('Deverá cadastrar corretamente', () => {
+  it('Deverá cadastrar corretamente o usuário', () => {
     creatNewUser.mockResolvedValueOnce();
     const email = 'somais@umsilva.com';
     const password = '123456';
     const containerRegister = register();
     const emailInformed = containerRegister.querySelector('.email');
     const passwordInformed = containerRegister.querySelector('.password');
-    const btnRegister = containerRegister.querySelector('#btn-register');
+
     emailInformed.value = email;
     passwordInformed.value = password;
-    btnRegister.dispatchEvent(new Event('click')); // aconteceu um novo evento
+    containerRegister.dispatchEvent(new Event('submit'));
 
     expect(creatNewUser).toHaveBeenCalledWith(email, password);
+    expect(creatNewUser).toHaveBeenCalledTimes(1);
   });
 });

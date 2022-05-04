@@ -23,7 +23,8 @@ export function creatNewUser(email, password) {
 // entrar com email e senha
 export function signinPassword(email, password) {
   // sendEmailVerification(auth.currentUser);
-
+  // eslint-disable-next-line no-shadow
+  const authentication = getAuth();
   return signInWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;
@@ -48,6 +49,6 @@ export function stateVerification(cb) {
 // função sair
 export function sair() {
   return signOut(authentication)
-    .then(() => 'sair') // volta para a home
+    .then(() => 'Logout')
     .catch((error) => error);
 }
