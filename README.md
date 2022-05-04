@@ -13,7 +13,6 @@
 
 ## 1. Introdução
 
-
 3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page
 Application
 (SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)
@@ -25,11 +24,7 @@ Application
 
 ---
 
-Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://pt.wikipedia.org/wiki/Empanada)
-, que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.
-**_ trocar o link pro deploy _**
-
-Você pode acessar a aplicação clicando <a href="https://github.com/natalieiss/SAP007-social-network">AQUI</a>
+Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://pt.wikipedia.org/wiki/Empanada), que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.Você pode acessar a aplicação clicando <a href="https://github.com/natalieiss/SAP007-social-network">AQUI</a>
 
 ---
 
@@ -72,10 +67,10 @@ A informação de como podemos cuidar do nosso Meio-Ambiente chega fácil até v
 ---
 
 ## 4.Histórias de usuário
+
 Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
-![histórias](./src/img/img-readme/historias.png)
----
+## ![histórias](./src/img/img-readme/historias.png)
 
 ## 3. Objetivos de aprendizagem
 
@@ -167,25 +162,20 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ---
 
-
-
 ## 6. Design
-
-
 
 ## Desenho de interface do usuário
 
 ### Protótipo de baixa fidelidade
 
-
 ---
+
 ### 7. 💻Linguagens e ferramentas utilizadas
 
 <article>
-<img align="center"  alt="VScode" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg">
+
 <img align="center"  alt="firebase" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg">	
 <img align="center"  alt="Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
-<img align="center"  alt="Github" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg">
 <img align="center"  alt="Jest" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg">
 <img align="center"  alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
 <img align="center"  alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -204,7 +194,7 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
   <tr>
     <td align="center">
       <a href="https://github.com/KarinaMel0">
-  <img align="right" alt="Karina"  width="100px;" style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/92555432?v=4.png"> <br>       
+  <img align="center" alt="Karina"  width="100px;" style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/92555432?v=4.png"> <br>       
   <sub>
           <b>Karina Mel</b>
         </sub>
@@ -212,7 +202,7 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
     </td>
     <td align="center">
       <a href="https://github.com/Marione-Tainara">
-  <img align="right" alt="Marione"  width="100px;"style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/91857912?v=4.png"/><br>
+  <img align="center" alt="Marione"  width="100px;"style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/91857912?v=4.png"/><br>
              <sub>
           <b>Marione Pereira</b>
         </sub>
@@ -222,7 +212,7 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
  <tr>
     <td align="center">
       <a href="https://github.com/natalieiss">
-  <img align="right" alt="Natalie"  width="100px;" style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/97197240?v=4.png"> <br>       
+  <img align="center" alt="Natalie"  width="100px;" style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/97197240?v=4.png"> <br>       
   <sub>
           <b>Natalie Silva</b>
         </sub>
