@@ -13,10 +13,7 @@
 
 ## 1. Introdução
 
-3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page
-Application
-(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)
-[_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
+3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
 
 ![adem-ay-Tk9m_HP4rgQ-unsplash](https://user-images.githubusercontent.com/110297/135544666-4efa54f1-4ff6-4c4c-b398-6df04ef56117.jpg)
 
