@@ -12,8 +12,5 @@ export function componentFooter() {
   >|Natalie Silva</a>
   `;
   createFooter.innerHTML = templateFooter;
-
-  // const link = document.getElementById('stylePages');
-  // link.href = 'src/pages-componentes/Styles/footer.css';
   return createFooter;
 }

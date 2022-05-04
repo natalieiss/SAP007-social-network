@@ -23,10 +23,13 @@ describe('creatNewUser', () => {
     const containerRegister = register();
     const emailInformed = containerRegister.querySelector('.email');
     const passwordInformed = containerRegister.querySelector('.password');
+    const check = containerRegister.querySelector('#check');
+    const form = containerRegister.querySelector('.form-login');
 
     emailInformed.value = email;
     passwordInformed.value = password;
-    containerRegister.dispatchEvent(new Event('submit'));
+    check.checked = true;
+    form.submit();
 
     expect(creatNewUser).toHaveBeenCalledWith(email, password);
     expect(creatNewUser).toHaveBeenCalledTimes(1);

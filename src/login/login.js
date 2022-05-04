@@ -29,8 +29,6 @@ export const login = () => {
   const password = containerLogin.querySelector('.password-input');
   const google = containerLogin.querySelector('.btn-google');
   const errorLogin = containerLogin.querySelector('.error-login');
-  const link = document.getElementById('stylePages'); // Criando o caminho para o Css
-  link.href = 'login/login.Css';
 
   containerLogin.addEventListener(
     'submit',
