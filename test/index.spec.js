@@ -2,9 +2,8 @@
  @jest-environment jsdom
  */
 
-import { creatNewUser, googleLogin } from '../src/firebase/firebaseauth.js';
+import { creatNewUser } from '../src/firebase/firebaseauth.js';
 import { register } from '../src/register/register.js';
-import { login } from '../src/login/login.js'
 
 jest.mock('../src/firebase/firebaseauth.js');
 jest.mock('../src/firebase/export.js');
@@ -32,21 +31,3 @@ describe('creatNewUser', () => {
     expect(creatNewUser).toHaveBeenCalledWith(email, password);
   });
 });
-
-describe('googleLogin', () => {
-  it('Deverá ser uma função', () => {
-    expect(typeof googleLogin).toBe('function');
-  });
-});
-
-describe('googleLogin', () => {
-  it('Deverá efetuar o login através do Google corretamente', () => {
-    googleLogin.mockResolvedValueOnce();
-    const containerLogin = login();
-    const btnGoogle = containerLogin.querySelector('.btn-google')
-    btnGoogle.dispatchEvent(new Event('click'))
-    expect(googleLogin).toHaveBeenCalledWith() //o que colocar?
-
-  })
-})
-
