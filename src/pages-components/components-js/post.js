@@ -16,7 +16,7 @@ export function structuresPost(item) {
     checksUser
       ? `
   <div class="btns">
-  <button id="btn-edit" class="btn-edit">Editar</button>
+  <button id="btn-edit" class="btn-edit"><img class="icon-edit" src="./img/bi_pencil-fill.svg">Editar</button>
   <button id="btn-delete" class="btn-del"><img class="icon-bin" src="./img/delete.png">Excluir</button>
   </div>`
       : ''
@@ -31,7 +31,7 @@ export function structuresPost(item) {
         item.message
       }</textarea>
         <div class="div-likes">
-       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/amor-verde.png"/></button><p id="like" class="likes">${
+       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/flat-color-icons_like.svg"/></button><p id="like" class="likes">${
          item.likes.length
        }</p>
       </div>

@@ -10,6 +10,7 @@ export function editPub(item, containerFeed) {
   <div id="changes-container" class="changes-container">
   <div id="modal-content" class="modal-content">
     <div id='message-container' class="message-container">
+    <h1>Deletar postagem?</h1>
       <textarea id="message" class="message" maxlength="200"
         placeholder="O que você está pensando?">${item.message}</textarea>
     </div>

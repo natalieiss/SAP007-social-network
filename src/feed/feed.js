@@ -11,12 +11,14 @@ export const timeline = () => {
   const templateFeed = `
  
   <main class='container-geral'>
-  <div> <button id='btn-logout' class='btn-logout'>sair</button></div>
+  </section>
+  <section id='perfil-section'><div id="info-user"><button id='btn-logout' class='btn-logout'>sair</button><a href='#about'></a></div></section>
   <span id="feedback" class='feedback'></span>
+  <div id="post-and-profile">
     <section class='area-post'>
-      <textarea  id="textpost"class='message'  maxlength='300' rows='10' placeholder='o que você está pensando?'></textarea>
+      <textarea  id="textpost"class='message'  maxlength='300' rows='10' placeholder='o que você está pensando?'></textarea> 
       <button  id='btn-post' class='btn-post'>Postar</button>
-    </section>
+  </div>
       <div class='btn-publicar'>
       </div>
     <div class='posts'>

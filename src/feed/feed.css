@@ -2,9 +2,14 @@
 @import '../pages-components/Styles/Variables.Css';
 body{
   background-color:var(--background-color);
+  color: white;
 }
-section{
-
+.container-geral{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.area-post{
 box-sizing: border-box;
 border-radius: 10px;
 margin-top: 10px;
@@ -12,13 +17,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-
+width: 70vw;
 }
 #textpost{
   width: 50%;
   height: 20%;
-  color:#000000;
-  font-size: 1rem;
+  color:#ffffff;
+  font-size: 1.2rem;
   padding:13px;
   background-color: #10141a;
   border-radius: 10px;
@@ -27,12 +32,12 @@ flex-direction: column;
 textarea{
   width: 23rem;
   height: 10rem;
-  color:#000000;
+  color:#ffffff;
   font-size: 1rem;
   padding:13px;
   background-color: #53AC59;
   resize: none;
-  
+  text-align: center;
 }
 #btn-post{
   position: relative;
@@ -41,8 +46,50 @@ textarea{
   height: 2rem;
   border-radius: 10px;
   font-size: 1.5rem;
+  transition: 1s;
+  transform: scale(1);
+  cursor: pointer;
+  background-color:#7694C2;
 }
-#all-posts, #new-post{
+#btn-post:hover{
+  transition: 1s;
+  transform: scale(1.1);
+  
+}
+#all-posts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 37px;
+}
+#new-posts{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 37px;
+}
+.div-likes{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.div-likes button{
+  background-color: transparent;
+  transition: 1s;
+  transform: scale(1);
+
+}
+.div-likes button img:hover{
+  transition: 1s;
+  transform: scale(1.2)
+}
+.post-div{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +97,7 @@ textarea{
   gap:20px;
   
 }
-#all-posts div, #new-post div {
+.post-div{
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,11 +106,87 @@ textarea{
   background-color: #2F3A4B;
   border-radius: 10px;
 }
-.posts{
-  display: flex;
+ .posts {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 40px;
+}
+.post-div .btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+#btn-delete, #btn-edit{
+  background-color: #1C232E;
+  padding: 10px;
+  border-radius:10px;
+}
+button img{
+  width: 30px;
+  height:30;
+}
+#perfil-section{
+  display:flex; 
+  align-items: row;
+  justify-content: flex-end;
+  position: relative;
+}
+#info-user button{
+  position: fixed;
+  right: 30px;
+  border-radius: 20px;
+  width: 10vw;
+  height: 5vh;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+#post-and-profile{
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#changes-container{
+  background: rgba(67, 83, 107, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#changes-container button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: 1s;
+  transform: scale(1);
+  cursor: pointer;
+  
+}
+#message-container h1{
+  text-align: center;
+  margin-top: 10px;
+  background-color: #2F3A4B;
+}
+#message{
+  border: solid 10px #2F3A4B;
+}
+@media only screen and (max-width: 925px){
+
 }
