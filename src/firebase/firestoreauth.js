@@ -11,7 +11,7 @@ import {
   arrayUnion,
   arrayRemove,
   // eslint-disable-next-line import/no-unresolved
-} from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js';
+} from './export.js';
 
 export const db = getFirestore(); // do firestore
 
@@ -25,10 +25,8 @@ export async function addPosts(message, userEmail) {
       date: new Date().toLocaleString('pt-br'), // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
       likes: [],
     });
-    console.log('Document written with ID: ', docRef.id); // do firestore
     return docRef.id;
   } catch (e) {
-    console.error('Error adding document: ', e);
     return null;
   }
 }
@@ -54,11 +52,11 @@ export function updateDocument(itemId, message) {
   });
 }
 export async function liked(itemId, userEmail) {
-    const postId = doc(db, 'posts', itemId);
-     await updateDoc(postId, {
-      likes: arrayUnion(userEmail),
-    });
-  }
+  const postId = doc(db, 'posts', itemId);
+  await updateDoc(postId, {
+    likes: arrayUnion(userEmail),
+  });
+}
 export async function unliked(itemId, userEmail) {
   const postId = doc(db, 'posts', itemId);
   await updateDoc(postId, {

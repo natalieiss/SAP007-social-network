@@ -1,7 +1,6 @@
 import { componentHeader } from '../pages-components/components-js/header.js';
 import { componentFooter } from '../pages-components/components-js/footer.js';
 
-
 export default () => {
   const containerAbout = document.createElement('div');
 

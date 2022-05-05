@@ -64,7 +64,7 @@ export const login = () => {
       googleLogin().then(() => {
         window.location.hash = '#timeline';
       });
-    })
+    }),
   );
   return containerLogin;
 };

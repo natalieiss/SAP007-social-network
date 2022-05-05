@@ -4,12 +4,9 @@ import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
-  // sendEmailVerification,
-  sendPasswordResetEmail,
   onAuthStateChanged,
   signOut,
-  // eslint-disable-next-line import/no-unresolved
-} from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js';
+} from './export.js';
 
 const provider = new GoogleAuthProvider();
 export const authentication = getAuth();
@@ -19,13 +16,9 @@ export function creatNewUser(email, password) {
     (userCredential) => {
       const user = userCredential.user;
       return user;
-    }
+    },
   );
 }
-
-export const resetaPassword = (email) => {
-  sendPasswordResetEmail(authentication, email);
-};
 
 // entrar com email e senha
 export function signinPassword(email, password) {
@@ -35,7 +28,7 @@ export function signinPassword(email, password) {
     (userCredential) => {
       const user = userCredential.user;
       return user;
-    }
+    },
   );
 }
 // entrar com o Google
@@ -58,20 +51,3 @@ export function sair() {
     .then(() => 'sair') // volta para a home
     .catch((error) => error);
 }
-// export function userData() {
-//   const auth = getAuth();
-//   const user = auth.currentUser;
-
-//   return user || localStorage.getItem('userEmail');
-// }
-
-// export function userData() {
-//   const email = localStorage.getItem('userEmail');
-//   if (!email) {
-//     return null;
-//   }
-//   const user = {
-//     email,
-//   };
-//   return user;
-// }
