@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { authentication } from '../../firebase/firebaseauth.js';
-import { liked, unliked } from '../../firebase/firestoreauth.js';
+import { liked, unliked } from '../../firebase/firebase-firestore.js';
 import { editPub, delPub } from './changes-posts.js';
 
 export function structuresPost(item) {
@@ -13,26 +13,24 @@ export function structuresPost(item) {
     <div class="post-div">
   <div>
   ${checksUser
-    ? `
+      ? `
   <div class="btns">
   <button id="btn-edit" class="btn-edit">Editar</button>
-  <button id="btn-delete" class="btn-del"><img class="icon-bin" src="./img/delete.png">Excluir</button>
+  <button id="btn-delete" class="btn-del"><img class="icon-bin" src="./img/delete.png">Reciclar Mensagem</button>
   </div>`
-    : ''
-}
+      : ''
+    }
   <div class="user-info">
       <p class="user-email">${item.userEmail}</p>
       </div>
     <div class="items-organization">
       <p class="info-date">${item.date}</p>
     </div>
-      <textarea id="message" class='message' maxlength="200" disabled>${
-  item.message
-}</textarea>
+      <textarea id="message" class='message' maxlength="200" disabled>${item.message
+    }</textarea>
         <div class="div-likes">
-       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/amor-verde.png"/></button><p id="like" class="likes">${
-  item.likes.length
-}</p>
+       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/amor-verde.png"/></button><p id="like" class="likes">${item.likes.length
+    }</p>
         </div>
 </div>`;
   containerPost.innerHTML = templatePosts;

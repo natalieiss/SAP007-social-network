@@ -1,7 +1,7 @@
 import {
   updateDocument,
   deleteDocument,
-} from '../../firebase/firestoreauth.js';
+} from '../../firebase/firebase-firestore.js';
 
 export function editPub(item, containerFeed) {
   const containerEdit = document.createElement('div');
@@ -11,12 +11,12 @@ export function editPub(item, containerFeed) {
   <div id="modal-content" class="modal-content">
     <div id='message-container' class="message-container">
       <textarea id="message" class="message" maxlength="200"
-        placeholder="O que você está pensando?">${item.message}</textarea>
+        placeholder="Vamos melhorar o planeta terra hoje? Digite aqui a sua mensagem.">${item.message}</textarea>
     </div>
   </div>
   <div class="btns-edit">
     <button id="btn-save" class="btn-save">Salvar alterações</button>
-    <button id="btn-cancel" class="btn-cancel">Cancelar alteraçõe</button>
+    <button id="btn-cancel" class="btn-cancel">Cancelar alterações</button>
   </div>
 </div>
     `;
@@ -53,10 +53,10 @@ export function delPub(item, containerFeed) {
     <div id="container-del" class="changes-container">
       <div class="content">
         <div class="delete-container" >
-        <h2 id='text-modal' class="text-modal">Apagar postagem?</h2>
-          <p class="text-modal">Você tem certeza que deseja excluir esta publicação</p>
+        <h2 id='text-modal' class="text-modal">Apagar postagem</h2>
+          <p class="text-modal">Você tem certeza que deseja excluir esta publicação?</p>
           <div>
-            <button id="btn-yes" class="btn-yes">Sim</button>
+            <button id="btn-yes" class="btn-yes">Confirmar</button>
             <button id="btn-no" class="btn-no">Cancelar</button>
           </div>
         </div>
