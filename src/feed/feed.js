@@ -30,8 +30,6 @@ export const timeline = () => {
   feed.innerHTML += templateFeed;
   feed.appendChild(componentFooter());
 
-  // const link = document.getElementById('stylePages');
-  // link.href = 'feed/feed.css';
   const logout = feed.querySelector('.btn-logout'); // botão para sair
   const message = feed.querySelector('.message'); // pegando menssagem do user
   const btnPost = feed.querySelector('.btn-post'); // botão de publicar
