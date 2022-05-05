@@ -15,13 +15,13 @@
 
 3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
 
-![adem-ay-Tk9m_HP4rgQ-unsplash](https://user-images.githubusercontent.com/110297/135544666-4efa54f1-4ff6-4c4c-b398-6df04ef56117.jpg)
+![rede social](./src/img/img-readme/cadastro.png)
 
 ## 2. Resumo do projeto
 
 ---
 
-Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://pt.wikipedia.org/wiki/Empanada), que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.Você pode acessar a aplicação clicando <a href="https://github.com/natalieiss/SAP007-social-network">AQUI</a>
+Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://pt.wikipedia.org/wiki/Empanada), que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/SAP007-social-network/">AQUI</a>
 
 ---
 
@@ -164,6 +164,20 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 ## Desenho de interface do usuário
 
 ### Protótipo de baixa fidelidade
+
+Então depois disso fizemos o protótipo de alta fidelidade no
+figma, que possibilitou a simulação do resultado da aplicação. Nossa intenção foi fazer uma interface simples, amigável e escolhemos cores que lembrasse o meio ambiente. E este foi o resultado final da tela de cadastro versão desktop e versão mobile ...
+
+
+## ![alta fidelidade](./src/img/img-readme/cadastro.png)
+
+
+## ![alta fidelidade](./src/img/img-readme/cadastro.png)
+
+
+Paleta de cores
+
+## ![alta fidelidade](./src/img/img-readme/paleta.png)
 
 ---
 
