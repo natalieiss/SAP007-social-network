@@ -19,7 +19,7 @@ export default () => {
     
     <picture><img class="developers-img" src="https://avatars.githubusercontent.com/u/91857912?v=4.png" width="60"/></picture>
     <a href="https://github.com/Marione-Tainara" target="_blank"><p class="name">🍀 Marione Pereira - 27 anos - Web Developer</p><a>
-     <a href='#home' class="return-home">Voltar a página home</a>
+     <a href='#home' class="return-home">Voltar para a página home</a>
 </div>
        
     `;

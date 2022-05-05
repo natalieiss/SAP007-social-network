@@ -9,6 +9,7 @@ export function componentHeader() {
  class="logo"
 />
 <h1 class="name-page">Eco Work Planet</h1>
+<h2>Um co-work para o ecossistema</h2>
  
   `;
   creatingHeader.innerHTML = templateHeader;

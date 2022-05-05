@@ -1,7 +1,7 @@
 import '../firebase/firebaseconfig.js';
 import { addPosts, getPosts } from '../firebase/firestoreauth.js';
 import { structuresPost } from '../pages-components/components-js/post.js';
-import { sair, authentication } from '../firebase/firebaseauth.js';
+import { goOut, authentication } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
 import { componentFooter } from '../pages-components/components-js/footer.js';
 
@@ -42,9 +42,9 @@ export const timeline = () => {
     e.preventDefault();
     // eslint-disable-next-line max-len
     const errorMessage = message.value; // avisar o usuário de que ele deve preencher os campos/ não deixar postar vazio
-    if (errorMessage === '' || !errorMessage) {
-      feedbackError.classList.add('error');
-      feedbackError.innerHTML = 'Campos obrigatórios!';
+    if (errorMessage === '' || !errorMessage) {// valida se a mensagem é inexistente ou vazia para bloquear o usuario de fazer um post nessas condições
+      feedbackError.classList.add('error');//add é um metodo o classlist é para alterar as classes ajuda a estilizar pois acrescenta o error e ela como classe
+      feedbackError.innerHTML = 'Campos obrigatórios!'; //diferença com o textcontent é que o innerhmtl interpreta coisas como html o innerhtml entende a semantica do html diferente do textcontent que não entende as tags e escreve elas
     } else {
       addPosts(errorMessage, authentication.currentUser.email).then((id) => {
         // functicon pronta
@@ -64,7 +64,7 @@ export const timeline = () => {
   });
   const divAllPosts = feed.querySelector('.all-posts');
 
-  const showingAllPosts = async () => {
+  const showingAllPosts = async () => { //geralmente é utilizado quando é puxado um serviço externo a grosso modo, porque depende de um tempo de resposta para acontecer. Para não interromper outras coisas e ficar esperando isso acontecer.
     const allPosts = await getPosts();
     allPosts.forEach((item) => {
       const infoOfPots = structuresPost(item);
@@ -74,7 +74,7 @@ export const timeline = () => {
   // função para o pessoa sair
   logout.addEventListener('click', (e) => {
     e.preventDefault();
-    sair().then(() => {
+    goOut().then(() => {
       window.location.hash = '';
     });
   });
