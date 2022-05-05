@@ -41,7 +41,7 @@ describe('creatNewUser', () => {
     const erro = {
       code: 'auth/weak-password',
     };
-    creatNewUser.mockRejectedValueOnce(new Error(erro));
+    creatNewUser.mockRejectedValueOnce(erro);
     const email = 'somais@umsilva.com';
     const password = '123456';
     const containerRegister = register();
@@ -55,8 +55,9 @@ describe('creatNewUser', () => {
     passwordInformed.value = password;
     check.checked = true;
     form.submit();
+    await new Promise(process.nextTick);
     expect(creatNewUser).toHaveBeenCalledWith(email, password);
-    await expect(error.innerHTML).toEqual('banana');
+    expect(error.innerHTML).toEqual('Senha com menos de 6 Digitos');
     expect(creatNewUser).toHaveBeenCalledTimes(1);
   });
 });

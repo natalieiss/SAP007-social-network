@@ -48,7 +48,7 @@ export const register = () => {
           window.location.hash = '#timeline';
         })
         .catch((error) => {
-          const Termos = containerRegister.querySelector('#MenssagemDeErro');
+          const Termos = containerRegister.querySelector('#erro-message');
           const errorCode = error.code;
           switch (errorCode) {
             case 'auth/weak-password':
