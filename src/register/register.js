@@ -99,6 +99,16 @@ export const register = () => {
           
           Em casos de compra de produtos ou serviços, será possível a devolução em até 07 (sete) dias, conforme o Código de Defesa do Consumidor.
           
+
+
+
+
+
+
+
+
+
+          
           Estes anúncios podem ser selecionados pela empresa de publicidade automaticamente, conforme as visitas recentes do VISITANTE, assim como baseado no seu histórico de busca, conforme as políticas de acesso da plataforma.
           
           8. DOS TERMOS GERAIS
