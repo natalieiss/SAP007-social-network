@@ -26,7 +26,7 @@ export async function addPosts(message, userEmail) {
       likes: [],
     });
     return docRef.id;
-  } catch (e) {
+  } catch (e) { //ta pegando o evento do botão? (comentário Nat)
     return null;
   }
 }
