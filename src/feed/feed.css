@@ -85,8 +85,7 @@ textarea{
   transform: scale(1);
 
 }
-.div-likes button img:hover{
-  transition: 1s;
+.div-likes button:hover{
   transform: scale(1.2)
 }
 .post-div{
@@ -119,6 +118,16 @@ textarea{
   justify-content: center;
   flex-direction: row;
   gap: 10px;
+  transition: 1s;
+
+}
+.post-div button:hover{
+  
+  transform: scale(1.1);
+}
+.post-div button{
+  cursor: pointer;
+  transition: 1s;
 }
 #btn-delete, #btn-edit{
   background-color: #1C232E;
@@ -144,6 +153,11 @@ button img{
   font-size: 2rem;
   text-align: center;
   cursor: pointer;
+  z-index: 100;
+}
+#items-organization{
+  display: flex;
+  justify-content: center
 }
 #post-and-profile{
   box-sizing: border-box;
@@ -168,15 +182,13 @@ button img{
   flex-direction: column;
 }
 #changes-container button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  padding: 10px;
   border-radius: 10px;
   font-size: 1.2rem;
   transition: 1s;
   transform: scale(1);
   cursor: pointer;
+  font-weight: 700;
   
 }
 #message-container h1{
@@ -187,6 +199,38 @@ button img{
 #message{
   border: solid 10px #2F3A4B;
 }
-@media only screen and (max-width: 925px){
+.delete-container{
+  background: rgba(67, 83, 107, 0.5);
+  width: 100vw;
+  gap: 10px;
+  height: 100vh;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 1s;
 
+}
+.delete-container button{
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: 1s;
+  transform: scale(1);
+  cursor: pointer;
+  font-weight: 700;
+}
+.delete-container button:hover{
+  transition: 1s;
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 479px){
+  textarea{
+      width: 52vw;
+      height: 29vh;
+  }
 }
