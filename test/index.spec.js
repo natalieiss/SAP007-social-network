@@ -16,6 +16,9 @@ describe('creatNewUser', () => {
 
 // eslint-disable-next-line jest/no-identical-title
 describe('creatNewUser', () => {
+  beforeEach(() => {
+    creatNewUser.mockClear();
+  });
   it('Deverá cadastrar corretamente o usuário', () => {
     creatNewUser.mockResolvedValueOnce();
     const email = 'somais@umsilva.com';
@@ -32,6 +35,28 @@ describe('creatNewUser', () => {
     form.submit();
 
     expect(creatNewUser).toHaveBeenCalledWith(email, password);
+    expect(creatNewUser).toHaveBeenCalledTimes(1);
+  });
+  it('Deverá receber um error Senha com menos de 6 Digitos', async () => {
+    const erro = {
+      code: 'auth/weak-password',
+    };
+    creatNewUser.mockRejectedValueOnce(new Error(erro));
+    const email = 'somais@umsilva.com';
+    const password = '123456';
+    const containerRegister = register();
+    const emailInformed = containerRegister.querySelector('.email');
+    const passwordInformed = containerRegister.querySelector('.password');
+    const check = containerRegister.querySelector('#check');
+    const error = containerRegister.querySelector('#erro-message');
+    const form = containerRegister.querySelector('.form-login');
+
+    emailInformed.value = email;
+    passwordInformed.value = password;
+    check.checked = true;
+    form.submit();
+    expect(creatNewUser).toHaveBeenCalledWith(email, password);
+    await expect(error.innerHTML).toEqual('banana');
     expect(creatNewUser).toHaveBeenCalledTimes(1);
   });
 });

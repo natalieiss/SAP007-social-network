@@ -9,7 +9,7 @@ export const register = () => {
   const templateRegister = `
   <h1>Cadastro</h1>
     <div id="erro">
-      <p id="MenssagemDeErro"></p>
+      <p id="erro-message"></p>
     </div>
     <form class='form-login'>
       <input type='email' name='email' class='email' placeholder='Insera e-mail' autocomplet required />
