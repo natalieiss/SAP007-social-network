@@ -1,24 +1,236 @@
 @import '../pages-components/Styles/reset-default.css';
 @import '../pages-components/Styles/Variables.Css';
 body{
-  background-color:rgb(136, 187, 136);
+  background-color:var(--background-color);
+  color: white;
 }
-section{
-background: linear-gradient(115.51deg, rgba(196, 196, 196, 0.2) 14.75%, rgba(196, 196, 196, 0) 78.73%);
-border: 1px solid #000000;
+.container-geral{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.area-post{
 box-sizing: border-box;
 border-radius: 10px;
 margin-top: 10px;
-
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-
-
+width: 70vw;
+}
+#textpost{
+  width: 50%;
+  height: 20%;
+  color:#ffffff;
+  font-size: 1.2rem;
+  padding:13px;
+  background-color: #10141a;
+  border-radius: 10px;
+  border: solid 10px #2F3A4B;
 }
 textarea{
-    width: 100px;
-    height: 100px;
-    color:#000000;
+  width: 23rem;
+  height: 10rem;
+  color:#ffffff;
+  font-size: 1rem;
+  padding:13px;
+  background-color: #53AC59;
+  resize: none;
+  text-align: center;
+}
+#btn-post{
+  position: relative;
+  margin-top: -20px;
+  width: 53%;
+  height: 2rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  transition: 1s;
+  transform: scale(1);
+  cursor: pointer;
+  background-color:#7694C2;
+}
+#btn-post:hover{
+  transition: 1s;
+  transform: scale(1.1);
+  
+}
+#all-posts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 37px;
+}
+#new-posts{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 37px;
+}
+.div-likes{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.div-likes button{
+  background-color: transparent;
+  transition: 1s;
+  transform: scale(1);
+
+}
+.div-likes button:hover{
+  transform: scale(1.2)
+}
+.post-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:20px;
+  
+}
+.post-div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2F3A4B;
+  border-radius: 10px;
+}
+ .posts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.post-div .btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  transition: 1s;
+
+}
+.post-div button:hover{
+  
+  transform: scale(1.1);
+}
+.post-div button{
+  cursor: pointer;
+  transition: 1s;
+}
+#btn-delete, #btn-edit{
+  background-color: #1C232E;
+  padding: 10px;
+  border-radius:10px;
+}
+button img{
+  width: 30px;
+  height:30;
+}
+#perfil-section{
+  display:flex; 
+  align-items: row;
+  justify-content: flex-end;
+  position: relative;
+}
+#info-user button{
+  position: fixed;
+  right: 30px;
+  border-radius: 20px;
+  width: 10vw;
+  height: 5vh;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+}
+#items-organization{
+  display: flex;
+  justify-content: center
+}
+#post-and-profile{
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#changes-container{
+  background: rgba(67, 83, 107, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#changes-container button{
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: 1s;
+  transform: scale(1);
+  cursor: pointer;
+  font-weight: 700;
+  
+}
+#message-container h1{
+  text-align: center;
+  margin-top: 10px;
+  background-color: #2F3A4B;
+}
+#message{
+  border: solid 10px #2F3A4B;
+}
+.delete-container{
+  background: rgba(67, 83, 107, 0.5);
+  width: 100vw;
+  gap: 10px;
+  height: 100vh;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 1s;
+
+}
+.delete-container button{
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: 1s;
+  transform: scale(1);
+  cursor: pointer;
+  font-weight: 700;
+}
+.delete-container button:hover{
+  transition: 1s;
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 479px){
+  textarea{
+      width: 52vw;
+      height: 29vh;
+  }
 }

@@ -15,14 +15,14 @@ export function structuresPost(item) {
   ${checksUser
     ? `
   <div class="btns">
-  <button id="btn-edit" class="btn-edit">Editar</button>
+  <button id="btn-edit" class="btn-edit"><img class="icon-edit" src="./img/bi_pencil-fill.svg">Editar</button>
   <button id="btn-delete" class="btn-del"><img class="icon-bin" src="./img/delete.png">Excluir</button>
   </div>`
     : ''
 }
   <div class="user-info">
       <p class="user-email">${item.userEmail}</p>
-      </div>
+    </div>
     <div class="items-organization">
       <p class="info-date">${item.date}</p>
     </div>
@@ -30,11 +30,11 @@ export function structuresPost(item) {
   item.message
 }</textarea>
         <div class="div-likes">
-       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/amor-verde.png"/></button><p id="like" class="likes">${
-  item.likes.length
-}</p>
-        </div>
-</div>`;
+       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/flat-color-icons_like.svg"/></button><p id="like" class="likes">${
+         item.likes.length
+       }</p>
+      </div>
+   </div>`;
   containerPost.innerHTML = templatePosts;
   if (checksUser) {
     const deletePost = containerPost.querySelector('#btn-delete');
@@ -61,6 +61,7 @@ export function structuresPost(item) {
     e.preventDefault();
     if (!item.likes.includes(gettingUserEmail.uid)) {
       // se o usuário não tiver dado o like ele pode // ou seja limita o numero de likes por user a 1
+      
       liked(item.id, gettingUserEmail.uid); // ta pegando o ID da Pub e ID do user
       item.likes.push(gettingUserEmail.uid); // pega o item(likes)/array da coleção
       arrOflikes += 1; // trás o array com o novo valor quando o user clica

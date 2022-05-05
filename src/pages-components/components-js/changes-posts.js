@@ -10,13 +10,14 @@ export function editPub(item, containerFeed) {
   <div id="changes-container" class="changes-container">
   <div id="modal-content" class="modal-content">
     <div id='message-container' class="message-container">
+    <h1>Editar postagem?</h1>
       <textarea id="message" class="message" maxlength="200"
         placeholder="O que você está pensando?">${item.message}</textarea>
     </div>
   </div>
   <div class="btns-edit">
     <button id="btn-save" class="btn-save">Salvar alterações</button>
-    <button id="btn-cancel" class="btn-cancel">Cancelar alteraçõe</button>
+    <button id="btn-cancel" class="btn-cancel">Cancelar alterações</button>
   </div>
 </div>
     `;
