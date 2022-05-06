@@ -63,7 +63,7 @@ export const register = () => {
           }
         });
     } else {
-      const Termos = containerRegister.querySelector('#MenssagemDeErro');
+      const Termos = containerRegister.querySelector('#erro-message');
       Termos.innerHTML = 'Aceite os termos de uso';
     }
   });

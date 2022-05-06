@@ -60,4 +60,27 @@ describe('creatNewUser', () => {
     expect(error.innerHTML).toEqual('Senha com menos de 6 Digitos');
     expect(creatNewUser).toHaveBeenCalledTimes(1);
   });
+  it('Deverá receber outro error E-mail em uso', async () => {
+    const erro = {
+      code: 'auth/email-already-in-use',
+    };
+    creatNewUser.mockRejectedValueOnce(erro);
+    const email = 'somais@umsilva.com';
+    const password = '123456';
+    const containerRegister = register();
+    const emailInformed = containerRegister.querySelector('.email');
+    const passwordInformed = containerRegister.querySelector('.password');
+    const check = containerRegister.querySelector('#check');
+    const error = containerRegister.querySelector('#erro-message');
+    const form = containerRegister.querySelector('.form-login');
+
+    emailInformed.value = email;
+    passwordInformed.value = password;
+    check.checked = true;
+    form.submit();
+    await new Promise(process.nextTick);
+    expect(creatNewUser).toHaveBeenCalledWith(email, password);
+    expect(error.innerHTML).toEqual('E-mail em uso');
+    expect(creatNewUser).toHaveBeenCalledTimes(1);
+  });
 });
