@@ -1,5 +1,6 @@
 @import '../Styles/reset-default.css';
 @import '../Styles/Variables.Css';
+
 .style-header{
   height: 20vh;
   width: 80vw;

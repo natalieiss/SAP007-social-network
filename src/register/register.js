@@ -7,6 +7,9 @@ export const register = () => {
   const containerRegister = document.createElement('div'); // criando uma div para inserir o conteúdo na tela
   containerRegister.setAttribute('class', 'container'); // para pegar pela class
   const templateRegister = `
+ <div id="content-register">
+  <picture><img class="developers-img" src="./img/pictureInicio.svg" alt="Icone planta"/></picture>
+ <section id="registro">
   <h1>Cadastro</h1>
     <div id="erro">
       <p id="MenssagemDeErro"></p>
@@ -16,7 +19,7 @@ export const register = () => {
       <input type='password' name='password' class='password' placeholder='Insera uma senha' requerid /><br>
       <button type='submit' id='btn-register'>Cadastrar</button><br>
       <a href='#login'> Já possui conta?</a><br>
-      <section id='termsUse'>
+      <fieldset id='termsUse'>
         <h1>Termos de uso</h1>
         <div id='paragraph'>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -27,8 +30,10 @@ export const register = () => {
         <label value=''>Concordo com os
           termos de uso</label>
         <input id='check' type='checkbox' name='checkbox' />
-      </section>
+      </fieldset>
     </form>
+  </section>
+  </div>
  `;
   containerRegister.appendChild(componentHeader());
   containerRegister.innerHTML += templateRegister;
