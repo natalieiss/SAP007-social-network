@@ -21,7 +21,7 @@ export function creatNewUser(email, password) {
 }
 
 // entrar com email e senha
-export function signinPassword(email, password) {
+export function signInPassword(email, password) {
   // sendEmailVerification(auth.currentUser);
 
   return signInWithEmailAndPassword(authentication, email, password).then(
@@ -46,7 +46,7 @@ export function stateVerification(cb) {
   }); // se tiver conectada é direcionada para o feed
 }
 // função sair
-export function sair() {
+export function goOut() {
   return signOut(authentication)
     .then(() => 'sair') // volta para a home
     .catch((error) => error);

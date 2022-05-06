@@ -10,7 +10,7 @@ export default () => {
      <video src="img/teste.mkv"></video>
     <a href="#login" class='link-pages'>Login</a><br>
     <a href="#register" class='link-pages'>Cadastro</a><br>
-    <a href="#about" class='link-pages'>Sobre</a><br>
+    <a href="#about" class='link-pages'>Sobre a aplicação</a><br>
     </div>
   `;
 
