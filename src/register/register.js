@@ -7,6 +7,9 @@ export const register = () => {
   const containerRegister = document.createElement('div');
   containerRegister.setAttribute('class', 'container');
   const templateRegister = `
+ <div id="content-register">
+  <picture><img class="developers-img" src="./img/pictureInicio.svg" alt="Icone planta"/></picture>
+ <section id="registro">
   <h1>Cadastro</h1>
     <div id="error">
       <p id="error-message"></p>
@@ -16,7 +19,7 @@ export const register = () => {
       <input type='password' name='password' class='password' placeholder='Preencha com a senha' required /><br>
       <button type='submit' id='btn-register'>Cadastrar</button><br>
       <a href='#login'> Já possui conta?</a><br>
-      <section id='termsUse'>
+      <fieldset id='termsUse'>
         <h1>Termos de uso</h1>
         <div id='paragraph'>
           <p>Seja bem-vindo ao ECO WORK PLANET. Leia com atenção todos os termos abaixo.
@@ -124,8 +127,10 @@ export const register = () => {
         <label value=''>Concordo com os
           termos de uso</label>
         <input id='check' type='checkbox' name='checkbox' />
-      </section>
+      </fieldset>
     </form>
+  </section>
+  </div>
  `;
   containerRegister.appendChild(componentHeader());
 
