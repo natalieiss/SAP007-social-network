@@ -1,11 +1,11 @@
 import '../firebase/firebaseconfig.js';
-import { creatNewUser } from '../firebase/firebaseauth.js';
+import { createNewUser } from '../firebase/firebaseauth.js';
 import { componentHeader } from '../pages-components/components-js/header.js';
 import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const register = () => {
-  const containerRegister = document.createElement('div'); // criando uma div para inserir o conteúdo na tela
-  containerRegister.setAttribute('class', 'container'); // para pegar pela class
+  const containerRegister = document.createElement('div');
+  containerRegister.setAttribute('class', 'container');
   const templateRegister = `
   <h1>Cadastro</h1>
     <div id="error">
@@ -128,23 +128,24 @@ export const register = () => {
     </form>
  `;
   containerRegister.appendChild(componentHeader());
+
   containerRegister.innerHTML += templateRegister;
+
   containerRegister.appendChild(componentFooter());
 
-  const email = containerRegister.querySelector('.email'); // pegando valor do e-mail
-  const password = containerRegister.querySelector('.password'); // pegando valor do password
-  const link = document.getElementById('stylePages'); // Criando o caminho para o Css
-  link.href = 'register/register.Css';
+  const email = containerRegister.querySelector('.email');
+  const password = containerRegister.querySelector('.password');
+  const checkbox = containerRegister.querySelector('#check');
 
   containerRegister.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.checkbox.checked) {
-      creatNewUser(email.value, password.value)
+    if (checkbox.checked) {
+      createNewUser(email.value, password.value)
         .then(() => {
-          window.location.hash = '#timeline'; // caso de certo vai pra hash
+          window.location.hash = '#timeline';
         })
         .catch((error) => {
-          const Termos = containerRegister.querySelector('#MenssagemDeErro');
+          const Termos = containerRegister.querySelector('#erro-message');
           const errorCode = error.code;
           switch (errorCode) {
             case 'auth/weak-password':
@@ -159,7 +160,7 @@ export const register = () => {
           }
         });
     } else {
-      const Termos = containerRegister.querySelector('#MenssagemDeErro');
+      const Termos = containerRegister.querySelector('#erro-message');
       Termos.innerHTML = 'Aceite os termos de uso';
     }
   });

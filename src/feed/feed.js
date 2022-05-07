@@ -32,8 +32,6 @@ export const timeline = () => {
   feed.innerHTML += templateFeed;
   feed.appendChild(componentFooter());
 
-  const link = document.getElementById('stylePages');
-  link.href = 'feed/feed.css';
   const logout = feed.querySelector('.btn-logout'); // botão para sair
   const message = feed.querySelector('.message'); // pegando menssagem do user
   const btnPost = feed.querySelector('.btn-post'); // botão de publicar
@@ -44,9 +42,10 @@ export const timeline = () => {
     e.preventDefault();
     // eslint-disable-next-line max-len
     const errorMessage = message.value; // avisar o usuário de que ele deve preencher os campos/ não deixar postar vazio
-    if (errorMessage === '' || !errorMessage) {// valida se a mensagem é inexistente ou vazia para bloquear o usuario de fazer um post nessas condições
-      feedbackError.classList.add('error');//add é um metodo o classlist é para alterar as classes ajuda a estilizar pois acrescenta o error e ela como classe
-      feedbackError.innerHTML = 'Campos obrigatórios!'; //diferença com o textcontent é que o innerhmtl interpreta coisas como html o innerhtml entende a semantica do html diferente do textcontent que não entende as tags e escreve elas
+    if (errorMessage === '' || !errorMessage) {
+      // valida se a mensagem é inexistente ou vazia para bloquear o usuario de fazer um post nessas condições
+      feedbackError.classList.add('error'); // add é um metodo o classlist é para alterar as classes ajuda a estilizar pois acrescenta o error e ela como classe
+      feedbackError.innerHTML = 'Campos obrigatórios!'; // diferença com o textcontent é que o innerhmtl interpreta coisas como html o innerhtml entende a semantica do html diferente do textcontent que não entende as tags e escreve elas
     } else {
       addPosts(errorMessage, authentication.currentUser.email).then((id) => {
         // functicon pronta
@@ -66,7 +65,7 @@ export const timeline = () => {
   });
   const divAllPosts = feed.querySelector('.all-posts');
 
-  const showingAllPosts = async () => { //geralmente é utilizado quando é puxado um serviço externo a grosso modo, porque depende de um tempo de resposta para acontecer. Para não interromper outras coisas e ficar esperando isso acontecer.
+  const showingAllPosts = async () => {
     const allPosts = await getPosts();
     allPosts.forEach((item) => {
       const infoOfPots = structuresPost(item);
