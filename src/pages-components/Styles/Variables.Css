@@ -7,12 +7,20 @@
     font-family: var(--main-font);
     font-style: normal;
   }
+  .style-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
   header{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-top: -10px;
+    margin-top: -15px;
   }
 :root{
     --background-color: #1C232E;
@@ -23,4 +31,9 @@
     --main-font: 'Poiret One', cursive;
     --font-color: #ffffff;
     --font-color-error:red;
+}
+@media only screen and (max-width: 406px){
+  .style-footer{
+   font-size: 0.8rem;
+}
 }

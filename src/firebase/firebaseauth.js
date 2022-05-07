@@ -11,7 +11,7 @@ import {
 const provider = new GoogleAuthProvider();
 export const authentication = getAuth();
 
-export function creatNewUser(email, password) {
+export function createNewUser(email, password) {
   return createUserWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;
@@ -21,7 +21,6 @@ export function creatNewUser(email, password) {
 }
 
 export function signInPassword(email, password) {
-
   return signInWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;
@@ -29,7 +28,6 @@ export function signInPassword(email, password) {
     },
   );
 }
-
 export function googleLogin() {
   return signInWithPopup(authentication, provider).then((result) => {
     const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -44,6 +42,6 @@ export function stateVerification(cb) {
 
 export function goOut() {
   return signOut(authentication)
-    .then(() => 'sair')
+    .then(() => 'Logout')
     .catch((error) => error);
 }

@@ -28,8 +28,5 @@ export default () => {
   containerAbout.innerHTML += template;
   containerAbout.appendChild(componentFooter());
 
-  const link = document.getElementById('stylePages');
-  link.href = 'about/about.css';
-
   return containerAbout;
 };

@@ -1,9 +1,9 @@
 import {
-  getFirestore, // para usar os recursos do firestore
-  collection, // parâmetro
-  addDoc, // adiconar documentos na coleção
-  getDocs, // pegar documentos da coleção
-  orderBy, // ordenar por algum parâmetro
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  orderBy,
   query,
   deleteDoc,
   doc,
@@ -13,16 +13,14 @@ import {
   // eslint-disable-next-line import/no-unresolved
 } from './export.js';
 
-export const db = getFirestore(); // do firestore
+export const db = getFirestore();
 
 export async function addPosts(message, userEmail) {
-  try { //se tudo der certo retorno o id do doc
-    // eslint-disable-next-line max-len
-    //  const documento referncia = await (pq é assincrona) addDOc function pronta (coleção (pega no Banco,// 'nome da coleção')  parametros a gente que escolhe
-    const docRef = await addDoc(collection(db, 'posts'), { //aqui a coleção sao os posts
-      message, //itens de um documento
+  try {
+    const docRef = await addDoc(collection(db, 'posts'), {
+      message,
       userEmail,
-      date: new Date().toLocaleString('pt-br'), // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+      date: new Date().toLocaleString('pt-br'),
       likes: [],
     });
     return docRef.id;

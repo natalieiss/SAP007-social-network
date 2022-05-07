@@ -29,8 +29,6 @@ export const login = () => {
   const password = containerLogin.querySelector('.password-input');
   const google = containerLogin.querySelector('.btn-google');
   const errorLogin = containerLogin.querySelector('.error-login');
-  const link = document.getElementById('stylePages');
-  link.href = 'login/login.Css';
 
   containerLogin.addEventListener(
     'submit',
@@ -61,7 +59,7 @@ export const login = () => {
       googleLogin().then(() => {
         window.location.hash = '#timeline';
       });
-    }),
+    })
   );
   return containerLogin;
 };

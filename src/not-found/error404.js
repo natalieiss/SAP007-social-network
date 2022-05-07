@@ -7,7 +7,5 @@ export default () => {
  
   `;
   errorNotFund.innerHTML = templateErrorNotFund;
-  const link = document.getElementById('stylePages');
-  link.href = 'not-found/notfound.css';
   return errorNotFund;
 };
