@@ -2,7 +2,7 @@ import '../firebase/firebaseconfig.js';
 import { addPosts, getPosts } from '../firebase/firestoreauth.js';
 import { structuresPost } from '../pages-components/components-js/post.js';
 import { goOut, authentication } from '../firebase/firebaseauth.js';
-import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
+import { componentHeader } from '../pages-components/components-js/header.js';
 import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const timeline = () => {
@@ -32,31 +32,31 @@ export const timeline = () => {
 
   const link = document.getElementById('stylePages');
   link.href = 'feed/feed.css';
-  const logout = feed.querySelector('.btn-logout'); // botão para sair
-  const message = feed.querySelector('.message'); // pegando menssagem do user
-  const btnPost = feed.querySelector('.btn-post'); // botão de publicar
-  const newPosts = feed.querySelector('.new-post'); //  novos posts e colocar na lista
+  const logout = feed.querySelector('.btn-logout');
+  const message = feed.querySelector('.message');
+  const btnPost = feed.querySelector('.btn-post');
+  const newPosts = feed.querySelector('.new-post');
   const feedbackError = feed.querySelector('#feedback');
 
   btnPost.addEventListener('click', async (e) => {
     e.preventDefault();
     // eslint-disable-next-line max-len
-    const errorMessage = message.value; // avisar o usuário de que ele deve preencher os campos/ não deixar postar vazio
-    if (errorMessage === '' || !errorMessage) {// valida se a mensagem é inexistente ou vazia para bloquear o usuario de fazer um post nessas condições
-      feedbackError.classList.add('error');//add é um metodo o classlist é para alterar as classes ajuda a estilizar pois acrescenta o error e ela como classe
-      feedbackError.innerHTML = 'Campos obrigatórios!'; //diferença com o textcontent é que o innerhmtl interpreta coisas como html o innerhtml entende a semantica do html diferente do textcontent que não entende as tags e escreve elas
+    const errorMessage = message.value;
+    if (errorMessage === '' || !errorMessage) {
+      feedbackError.classList.add('error');
+      feedbackError.innerHTML = 'Campos obrigatórios!';
     } else {
       addPosts(errorMessage, authentication.currentUser.email).then((id) => {
         // functicon pronta
-        const date = new Date().toLocaleString('pt-br'); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+        const date = new Date().toLocaleString('pt-br');
         const item = {
-          userEmail: authentication.currentUser.email, // para saber qual e-mail está postando
-          message: message.value, // pega valor da menssagem
-          date, // o horario e data
+          userEmail: authentication.currentUser.email,
+          message: message.value,
+          date,
           id,
           likes: [],
         };
-        newPosts.prepend(structuresPost(item)); // https://www.youtube.com/watch?v=mAfeyy2bLzI
+        newPosts.prepend(structuresPost(item));
         message.value = '';
         feedbackError.innerHTML = '';
       });
@@ -64,14 +64,14 @@ export const timeline = () => {
   });
   const divAllPosts = feed.querySelector('.all-posts');
 
-  const showingAllPosts = async () => { //geralmente é utilizado quando é puxado um serviço externo a grosso modo, porque depende de um tempo de resposta para acontecer. Para não interromper outras coisas e ficar esperando isso acontecer.
+  const showingAllPosts = async () => {
     const allPosts = await getPosts();
     allPosts.forEach((item) => {
       const infoOfPots = structuresPost(item);
       divAllPosts.prepend(infoOfPots);
     });
   };
-  // função para o pessoa sair
+
   logout.addEventListener('click', (e) => {
     e.preventDefault();
     goOut().then(() => {

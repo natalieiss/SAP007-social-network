@@ -26,7 +26,7 @@ describe('creatNewUser', () => {
     const btnRegister = containerRegister.querySelector('#btn-register');
     emailInformed.value = email;
     passwordInformed.value = password;
-    btnRegister.dispatchEvent(new Event('click')); // aconteceu um novo evento
+    btnRegister.dispatchEvent(new Event('click'));
 
     expect(creatNewUser).toHaveBeenCalledWith(email, password);
   });

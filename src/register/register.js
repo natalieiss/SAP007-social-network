@@ -131,9 +131,9 @@ export const register = () => {
   containerRegister.innerHTML += templateRegister;
   containerRegister.appendChild(componentFooter());
 
-  const email = containerRegister.querySelector('.email'); // pegando valor do e-mail
-  const password = containerRegister.querySelector('.password'); // pegando valor do password
-  const link = document.getElementById('stylePages'); // Criando o caminho para o Css
+  const email = containerRegister.querySelector('.email');
+  const password = containerRegister.querySelector('.password');
+  const link = document.getElementById('stylePages');
   link.href = 'register/register.Css';
 
   containerRegister.addEventListener('submit', (e) => {
@@ -141,7 +141,7 @@ export const register = () => {
     if (e.target.checkbox.checked) {
       creatNewUser(email.value, password.value)
         .then(() => {
-          window.location.hash = '#timeline'; // caso de certo vai pra hash
+          window.location.hash = '#timeline';
         })
         .catch((error) => {
           const Termos = containerRegister.querySelector('#MenssagemDeErro');

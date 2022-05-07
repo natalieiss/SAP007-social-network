@@ -22,7 +22,7 @@ export function editPub(item, containerFeed) {
     `;
   containerEdit.innerHTML = templateEdit;
 
-  const modalEdit = containerEdit.querySelector('#changes-container'); // pegar modal edit
+  const modalEdit = containerEdit.querySelector('#changes-container');
   const confirmEdit = containerEdit.querySelector('#btn-save');
   const cancelEdit = containerEdit.querySelector('#btn-cancel');
   const message = containerEdit.querySelector('#message');
@@ -31,14 +31,14 @@ export function editPub(item, containerFeed) {
     updateDocument(item.id, message.value).then(() => {
       const messageEdit = containerFeed.querySelector('#message');
       messageEdit.innerHTML = message.value;
-      containerEdit.remove();//remove coisas do HTML, quando a pessoa tiver realizado tudo que quer o modal é removido
+      containerEdit.remove();
     });
   });
   cancelEdit.addEventListener('click', () => {
     containerEdit.remove();
   });
   window.addEventListener('click', (e) => {
-    if (e.target === modalEdit) { //fala pra gente qual é o elemento alvo do evento que a gente ta mapeando
+    if (e.target === modalEdit) {
       containerEdit.remove();
     }
   });
@@ -63,22 +63,19 @@ export function delPub(item, containerFeed) {
     </div>
     `;
   containerDel.innerHTML = templateChanges;
-  const modalDel = containerDel.querySelector('#container-del'); // pegar modal del
+  const modalDel = containerDel.querySelector('#container-del');
   const btnConfirm = containerDel.querySelector('#btn-yes');
   const btnCancel = containerDel.querySelector('#btn-no');
 
   btnConfirm.addEventListener('click', () => {
-    // pegar o click do botão (confirmação)
     deleteDocument(item.id).then(() => {
       containerFeed.remove();
     });
   });
   btnCancel.addEventListener('click', () => {
-    // pegar o click do botão (quando a pessoa cancela)
     containerDel.remove();
   });
-  window.addEventListener('click', (e) => { //o window o js já entende sem estar declarado
-    // pra retirar o modal da tela
+  window.addEventListener('click', (e) => {
     if (e.target === modalDel) {
       containerDel.remove();
     }

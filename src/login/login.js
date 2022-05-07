@@ -29,7 +29,7 @@ export const login = () => {
   const password = containerLogin.querySelector('.password-input');
   const google = containerLogin.querySelector('.btn-google');
   const errorLogin = containerLogin.querySelector('.error-login');
-  const link = document.getElementById('stylePages'); // Criando o caminho para o Css
+  const link = document.getElementById('stylePages');
   link.href = 'login/login.Css';
 
   containerLogin.addEventListener(
@@ -42,15 +42,12 @@ export const login = () => {
         })
         .catch((error) => {
           if (error.code === 'auth/internal-error') {
-            // error alternativo
             errorLogin.innerHTML = 'Campos obrigatórios!';
             errorLogin.style.display = 'block';
           } else if (error.code === 'auth/wrong-password') {
-            // senha inválida
             errorLogin.innerHTML = 'Esta senha não é válida!';
             errorLogin.style.display = 'block';
           } else if (error.code === 'auth/user-not-found') {
-            // usuário sem conta
             errorLogin.innerHTML = 'Usuário não cadastrado, registre-se!';
             errorLogin.style.display = 'block';
           }
