@@ -19,7 +19,7 @@ describe('createNewUser', () => {
   beforeEach(() => {
     createNewUser.mockClear();
   });
-  it('Deverá cadastrar corretamente o usuário', () => {
+  it('Should correctly register the user', () => {
     createNewUser.mockResolvedValueOnce();
     const email = 'somais@umsilva.com';
     const password = '123456';
@@ -27,7 +27,7 @@ describe('createNewUser', () => {
     const emailInformed = containerRegister.querySelector('.email');
     const passwordInformed = containerRegister.querySelector('.password');
     const check = containerRegister.querySelector('#check');
-    const form = containerRegister.querySelector('.form-login');
+    const form = containerRegister.querySelector('.form-register');
 
     emailInformed.value = email;
     passwordInformed.value = password;
@@ -37,19 +37,19 @@ describe('createNewUser', () => {
     expect(createNewUser).toHaveBeenCalledWith(email, password);
     expect(createNewUser).toHaveBeenCalledTimes(1);
   });
-  it('Deverá receber um error Senha com menos de 6 Digitos', async () => {
+  it('should receive a Password error with less than 6 digits', async () => {
     const erro = {
       code: 'auth/weak-password',
     };
     createNewUser.mockRejectedValueOnce(erro);
     const email = 'somais@umsilva.com';
-    const password = '123456';
+    const password = '1234';
     const containerRegister = register();
     const emailInformed = containerRegister.querySelector('.email');
     const passwordInformed = containerRegister.querySelector('.password');
     const check = containerRegister.querySelector('#check');
     const error = containerRegister.querySelector('#erro-message');
-    const form = containerRegister.querySelector('.form-login');
+    const form = containerRegister.querySelector('.form-register');
 
     emailInformed.value = email;
     passwordInformed.value = password;
@@ -60,7 +60,7 @@ describe('createNewUser', () => {
     expect(error.innerHTML).toEqual('Senha com menos de 6 Digitos');
     expect(createNewUser).toHaveBeenCalledTimes(1);
   });
-  it('Deverá receber outro error E-mail em uso', async () => {
+  it('should receive another E-mail error in use', async () => {
     const erro = {
       code: 'auth/email-already-in-use',
     };
@@ -72,11 +72,34 @@ describe('createNewUser', () => {
     const passwordInformed = containerRegister.querySelector('.password');
     const check = containerRegister.querySelector('#check');
     const error = containerRegister.querySelector('#erro-message');
-    const form = containerRegister.querySelector('.form-login');
+    const form = containerRegister.querySelector('.form-register');
 
     emailInformed.value = email;
     passwordInformed.value = password;
     check.checked = true;
+    form.submit();
+    await new Promise(process.nextTick);
+    expect(createNewUser).toHaveBeenCalledWith(email, password);
+    expect(error.innerHTML).toEqual('E-mail em uso');
+    expect(createNewUser).toHaveBeenCalledTimes(1);
+  });
+  it('should get one when the terms are not accepted', async () => {
+    const erro = {
+      code: 'auth/internal-error',
+    };
+    createNewUser.mockRejectedValueOnce(erro);
+    const email = 'somais@umsilva.com';
+    const password = '123456';
+    const containerRegister = register();
+    const emailInformed = containerRegister.querySelector('.email');
+    const passwordInformed = containerRegister.querySelector('.password');
+    const check = containerRegister.querySelector('#check');
+    const error = containerRegister.querySelector('#erro-message');
+    const form = containerRegister.querySelector('.form-register');
+
+    emailInformed.value = email;
+    passwordInformed.value = password;
+    check.checked = false;
     form.submit();
     await new Promise(process.nextTick);
     expect(createNewUser).toHaveBeenCalledWith(email, password);

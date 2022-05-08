@@ -43,7 +43,7 @@ export const login = () => {
             errorLogin.innerHTML = 'Campos obrigatórios!';
             errorLogin.style.display = 'block';
           } else if (error.code === 'auth/wrong-password') {
-            errorLogin.innerHTML = 'Esta senha não é válida!';
+            errorLogin.innerHTML = 'E-mail ou senha não são válidos!';
             errorLogin.style.display = 'block';
           } else if (error.code === 'auth/user-not-found') {
             errorLogin.innerHTML = 'Usuário não cadastrado, registre-se!';
@@ -59,7 +59,7 @@ export const login = () => {
       googleLogin().then(() => {
         window.location.hash = '#timeline';
       });
-    })
+    }),
   );
   return containerLogin;
 };

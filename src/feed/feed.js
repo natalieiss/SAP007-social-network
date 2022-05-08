@@ -36,22 +36,17 @@ export const timeline = () => {
   const message = feed.querySelector('.message');
   const btnPost = feed.querySelector('.btn-post');
   const newPosts = feed.querySelector('.new-post');
-  const logout = feed.querySelector('.btn-logout'); // botão para sair
-  const message = feed.querySelector('.message'); // pegando menssagem do user
-  const btnPost = feed.querySelector('.btn-post'); // botão de publicar
-  const newPosts = feed.querySelector('.new-post'); //  novos posts e colocar na lista
   const feedbackError = feed.querySelector('#feedback');
 
   btnPost.addEventListener('click', async (e) => {
     e.preventDefault();
-    // eslint-disable-next-line max-len
     const errorMessage = message.value; 
     if (errorMessage === '' || !errorMessage) {
       feedbackError.classList.add('error'); 
       feedbackError.innerHTML = 'Campos obrigatórios!';
     } else {
       addPosts(errorMessage, authentication.currentUser.email).then((id) => {
-        // functicon pronta
+ 
         const date = new Date().toLocaleString('pt-br');
         const item = {
           userEmail: authentication.currentUser.email,
@@ -75,7 +70,6 @@ export const timeline = () => {
       divAllPosts.prepend(infoOfPots);
     });
   };
-
   logout.addEventListener('click', (e) => {
     e.preventDefault();
     goOut().then(() => {
