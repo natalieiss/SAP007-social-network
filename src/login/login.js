@@ -45,7 +45,7 @@ export const login = () => {
             errorLogin.style.display = 'block';
           } else if (error.code === 'auth/wrong-password') {
             // senha inválida
-            errorLogin.innerHTML = 'Esta senha não é válida!';
+            errorLogin.innerHTML = 'E-mail ou senha não são válidos!';
             errorLogin.style.display = 'block';
           } else if (error.code === 'auth/user-not-found') {
             // usuário sem conta
@@ -62,7 +62,7 @@ export const login = () => {
       googleLogin().then(() => {
         window.location.hash = '#timeline';
       });
-    })
+    }),
   );
   return containerLogin;
 };

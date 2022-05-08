@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { authentication } from '../../firebase/firebaseauth.js';
 import { liked, unliked } from '../../firebase/firestoreauth.js';
 import { editPub, delPub } from './changes-posts.js';
@@ -12,7 +11,8 @@ export function structuresPost(item) {
   const templatePosts = `
     <div class="post-div">
   <div>
-  ${checksUser
+  ${
+  checksUser
     ? `
   <div class="btns">
   <button id="btn-edit" class="btn-edit"><img class="icon-edit" src="./img/bi_pencil-fill.svg">Editar</button>
@@ -31,8 +31,8 @@ export function structuresPost(item) {
 }</textarea>
         <div class="div-likes">
        <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/flat-color-icons_like.svg"/></button><p id="like" class="likes">${
-         item.likes.length
-       }</p>
+  item.likes.length
+}</p>
       </div>
    </div>`;
   containerPost.innerHTML = templatePosts;
@@ -60,17 +60,15 @@ export function structuresPost(item) {
   btnlikes.addEventListener('click', async (e) => {
     e.preventDefault();
     if (!item.likes.includes(gettingUserEmail.uid)) {
-      // se o usuário não tiver dado o like ele pode // ou seja limita o numero de likes por user a 1
-      
-      liked(item.id, gettingUserEmail.uid); // ta pegando o ID da Pub e ID do user
-      item.likes.push(gettingUserEmail.uid); // pega o item(likes)/array da coleção
-      arrOflikes += 1; // trás o array com o novo valor quando o user clica
-      quantityLikes.textContent = arrOflikes; // printa o valor quantidade
+      liked(item.id, gettingUserEmail.uid);
+      item.likes.push(gettingUserEmail.uid);
+      arrOflikes += 1;
+      quantityLikes.textContent = arrOflikes;
     } else {
-      const unlikedUser = item.likes.indexOf(gettingUserEmail); // PEGA  O 1ª ITEM DO ARRAY
+      const unlikedUser = item.likes.indexOf(gettingUserEmail);
       unliked(item.id, gettingUserEmail.uid);
-      item.likes.splice(unlikedUser, 1); // O método splice() altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
-      arrOflikes -= 1; // SE COLOCAR MENOS -1 OU INVÉS DE = -1 O VALOR FICA NEGATIVO
+      item.likes.splice(unlikedUser, 1);
+      arrOflikes -= 1;
       quantityLikes.textContent = arrOflikes;
     }
   });

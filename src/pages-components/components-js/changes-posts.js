@@ -32,14 +32,14 @@ export function editPub(item, containerFeed) {
     updateDocument(item.id, message.value).then(() => {
       const messageEdit = containerFeed.querySelector('#message');
       messageEdit.innerHTML = message.value;
-      containerEdit.remove();//remove coisas do HTML, quando a pessoa tiver realizado tudo que quer o modal é removido
+      containerEdit.remove();
     });
   });
   cancelEdit.addEventListener('click', () => {
     containerEdit.remove();
   });
   window.addEventListener('click', (e) => {
-    if (e.target === modalEdit) { //fala pra gente qual é o elemento alvo do evento que a gente ta mapeando
+    if (e.target === modalEdit) {
       containerEdit.remove();
     }
   });
@@ -78,7 +78,7 @@ export function delPub(item, containerFeed) {
     // pegar o click do botão (quando a pessoa cancela)
     containerDel.remove();
   });
-  window.addEventListener('click', (e) => { //o window o js já entende sem estar declarado
+  window.addEventListener('click', (e) => {
     // pra retirar o modal da tela
     if (e.target === modalDel) {
       containerDel.remove();

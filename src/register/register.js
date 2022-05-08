@@ -14,7 +14,7 @@ export const register = () => {
     <div id="error">
       <p id="error-message"></p>
     </div>
-    <form class='form-login'>
+    <form class='form-register'>
       <input type='email' name='email' class='email' placeholder='Preencha com o e-mail' autocomplete required />
       <input type='password' name='password' class='password' placeholder='Preencha com a senha' required /><br>
       <button type='submit' id='btn-register'>Cadastrar</button><br>
