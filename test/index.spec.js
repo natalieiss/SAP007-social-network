@@ -85,27 +85,4 @@ describe('createNewUser', () => {
   });
 });
 
-describe('createNewUser', () => {
-  beforeEach(() => {
-    createNewUser.mockClear();
-  });
-  it('Deverá cadastrar corretamente o usuário', () => {
-    createNewUser.mockResolvedValueOnce();
-    const email = 'somais@umsilva.com';
-    const password = '123456';
-    const containerRegister = register();
-    const emailInformed = containerRegister.querySelector('.email');
-    const passwordInformed = containerRegister.querySelector('.password');
-    const check = containerRegister.querySelector('#check');
-    const form = containerRegister.querySelector('.form-login');
 
-    emailInformed.value = email;
-    passwordInformed.value = password;
-    check.checked = true;
-    form.submit();
-
-    expect(createNewUser).toHaveBeenCalledWith(email, password);
-    expect(createNewUser).toHaveBeenCalledTimes(1);
-  });
- 
-});
