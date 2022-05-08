@@ -1,0 +1,20 @@
+
+@import '../Styles/Variables.Css';
+
+.style-footer{
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 5%;
+}
+.authors{
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 768px){
+  .authors{
+   font-size: 1.3rem;
+}
+}

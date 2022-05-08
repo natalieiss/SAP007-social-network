@@ -10,8 +10,8 @@ import {
 
 const provider = new GoogleAuthProvider();
 export const authentication = getAuth();
-// criar um novo usuários
-export function creatNewUser(email, password) {
+
+export function createNewUser(email, password) {
   return createUserWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;
@@ -20,10 +20,7 @@ export function creatNewUser(email, password) {
   );
 }
 
-// entrar com email e senha
-export function signinPassword(email, password) {
-  // sendEmailVerification(auth.currentUser);
-
+export function signInPassword(email, password) {
   return signInWithEmailAndPassword(authentication, email, password).then(
     (userCredential) => {
       const user = userCredential.user;
@@ -31,23 +28,20 @@ export function signinPassword(email, password) {
     },
   );
 }
-// entrar com o Google
 export function googleLogin() {
   return signInWithPopup(authentication, provider).then((result) => {
     const credential = GoogleAuthProvider.credentialFromResult(result);
-    //  const token = credential.accessToken;
-    // const user = result.user;
     return credential;
   });
 }
 export function stateVerification(cb) {
   onAuthStateChanged(authentication, (user) => {
-    cb(user != null); // function de sair veio do firebase
-  }); // se tiver conectada é direcionada para o feed
+    cb(user != null);
+  });
 }
-// função sair
-export function sair() {
+
+export function goOut() {
   return signOut(authentication)
-    .then(() => 'sair') // volta para a home
+    .then(() => 'Logout')
     .catch((error) => error);
 }
