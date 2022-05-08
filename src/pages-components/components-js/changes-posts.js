@@ -23,7 +23,7 @@ export function editPub(item, containerFeed) {
     `;
   containerEdit.innerHTML = templateEdit;
 
-  const modalEdit = containerEdit.querySelector('#changes-container'); // pegar modal edit
+  const modalEdit = containerEdit.querySelector('#changes-container');
   const confirmEdit = containerEdit.querySelector('#btn-save');
   const cancelEdit = containerEdit.querySelector('#btn-cancel');
   const message = containerEdit.querySelector('#message');
@@ -64,22 +64,19 @@ export function delPub(item, containerFeed) {
     </div>
     `;
   containerDel.innerHTML = templateChanges;
-  const modalDel = containerDel.querySelector('#container-del'); // pegar modal del
+  const modalDel = containerDel.querySelector('#container-del');
   const btnConfirm = containerDel.querySelector('#btn-yes');
   const btnCancel = containerDel.querySelector('#btn-no');
 
   btnConfirm.addEventListener('click', () => {
-    // pegar o click do botão (confirmação)
     deleteDocument(item.id).then(() => {
       containerFeed.remove();
     });
   });
   btnCancel.addEventListener('click', () => {
-    // pegar o click do botão (quando a pessoa cancela)
     containerDel.remove();
   });
   window.addEventListener('click', (e) => {
-    // pra retirar o modal da tela
     if (e.target === modalDel) {
       containerDel.remove();
     }

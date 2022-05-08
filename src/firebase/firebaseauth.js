@@ -39,7 +39,7 @@ export function stateVerification(cb) {
     cb(user != null);
   });
 }
-// função sair
+
 export function goOut() {
   return signOut(authentication)
     .then(() => 'Logout')

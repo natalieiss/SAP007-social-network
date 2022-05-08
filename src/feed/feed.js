@@ -2,7 +2,7 @@ import '../firebase/firebaseconfig.js';
 import { addPosts, getPosts } from '../firebase/firestoreauth.js';
 import { structuresPost } from '../pages-components/components-js/post.js';
 import { goOut, authentication } from '../firebase/firebaseauth.js';
-import { componentHeader } from '../pages-components/components-js/header.js'; // importando componente de cabeçalho
+import { componentHeader } from '../pages-components/components-js/header.js';
 import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const timeline = () => {
@@ -40,13 +40,13 @@ export const timeline = () => {
 
   btnPost.addEventListener('click', async (e) => {
     e.preventDefault();
-    const errorMessage = message.value;
+    const errorMessage = message.value; 
     if (errorMessage === '' || !errorMessage) {
-      feedbackError.classList.add('error');
+      feedbackError.classList.add('error'); 
       feedbackError.innerHTML = 'Campos obrigatórios!';
     } else {
       addPosts(errorMessage, authentication.currentUser.email).then((id) => {
-        // functicon pronta
+ 
         const date = new Date().toLocaleString('pt-br');
         const item = {
           userEmail: authentication.currentUser.email,
