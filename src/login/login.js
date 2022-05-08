@@ -11,7 +11,7 @@ export const login = () => {
   <p class='paragraph'>Login</p>
   <span class='error-login'></span>
   <input type='email' name='email' class='email-input input-users' placeholder='Preencha com o e-mail' autocomplete required /><br>
-  <input type='password'name='password' class='password-input input-users' placeholder='Preencha com a senha' required /><br>
+  <input type='password' name='password' class='password-input input-users' placeholder='Preencha com a senha' required /><br>
   <button class='btn-submit' type='submit'>Entrar</button><br>
   <button class='btn-google'><img src='img/google.png' alt='botão Google'>Efetuar login com o Google
   </button><br>
