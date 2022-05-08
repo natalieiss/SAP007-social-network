@@ -13,8 +13,6 @@ export const login = () => {
   <input type="email" name="email" class="email-input input-users" placeholder="Preencha com o e-mail" autocomplete required /><br>
   <input type="password" name="password" class="password-input input-users" placeholder="Preencha com a senha" required /><br>
   <button class='btn-submit' type="submit">Entrar</button><br>
-  <a href="" > <p class='reset-password'>Esqueceu a sua senha? Clique aqui</p></a><br>
-  <br>
   <button class="btn-google"><img src="img/google.png" alt="botão Google">Efetuar login com o Google
   </button><br>
 </form>
@@ -60,7 +58,7 @@ export const login = () => {
       googleLogin().then(() => {
         window.location.hash = '#timeline';
       });
-    }),
+    })
   );
   return containerLogin;
 };
