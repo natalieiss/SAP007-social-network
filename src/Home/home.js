@@ -7,7 +7,7 @@ export default () => {
   const templateHome = `
   <h1 class='home-title'>Bem-Vindo ao Eco Work Planet</h1>
   <div class='home-main'>
-  
+    <div id="container-video"><iframe src="https://www.youtube.com/embed/sbj7Vb_Aj38?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <a href="#login" class='link-pages'>Login</a><br>
     <a href="#register" class='link-pages'>Cadastro</a><br>
     <a href="#about" class='link-pages'>Sobre a aplicação</a><br>

@@ -8,7 +8,7 @@ export const register = () => {
   containerRegister.setAttribute('class', 'container');
   const templateRegister = `
  <div id="content-register">
-  <picture><img class="developers-img" src="./img/pictureInicio.svg" alt="Icone planta"/></picture>
+  
  <section id="registro">
   <h1>Cadastro</h1>
     <div id="error">
@@ -150,7 +150,7 @@ export const register = () => {
           window.location.hash = '#timeline';
         })
         .catch((error) => {
-          const Termos = containerRegister.querySelector('#erro-message');
+          const Termos = containerRegister.querySelector('#error-message');
           const errorCode = error.code;
           switch (errorCode) {
             case 'auth/weak-password':
@@ -165,7 +165,7 @@ export const register = () => {
           }
         });
     } else {
-      const Termos = containerRegister.querySelector('#erro-message');
+      const Termos = containerRegister.querySelector('#error-message');
       Termos.innerHTML = 'Aceite os termos de uso';
     }
   });

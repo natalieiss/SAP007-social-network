@@ -13,21 +13,29 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  margin-top: 77px;
 }
 .container-login{
-  width: 100%;
-  height: 100%;
-
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+    padding-bottom: 20px;
 }
 a{
   text-decoration: none;
   color:var(--font-color);
 }
+.paragraph{
+  font-weight: 700;
+  font-size: 2rem;
+}
 .form-login{
-  width: 90%;
-  height: 107%;
+  width: 20rem;
+  height: 40rem;
   margin: auto;
-  margin-top: 1.5rem;
+  gap: 15px;
   background: #2F3A4B;
   border-radius: 0.6rem;
   display: flex;
@@ -40,7 +48,7 @@ a{
   background: rgba(74, 90, 116, 0.5);
   color: var(--font-color);
   border-color:var(--background-color) ;
-  width: 60vw;
+  width: 10rem;
   height: 4vh;
   border-radius: 5px;
   padding-left: 10px;
@@ -55,20 +63,28 @@ a{
 
 
 @media  ( min-width:500px) and (max-width:700px){
-  .form-login{
+  /* .form-login{
     width: 73%;
-  }.input-users {
-    width: 18rem;}
+  }*/
+  .input-users { 
+    width: 10rem;}
     .btn-submit{
-      width: 18rem;
+      width: 10rem;
     }.btn-google{
-      width: 18rem;
+      width: 10rem;
    
     }
 }
+@media only screen and (max-width: 406px){
+  .form-login {
+    width: 17rem;
+    height: 38rem;
+}
+
+}
 
 
-@media  ( min-width:701px) and (max-width:1920px){
+/* @media  ( min-width:701px) and (max-width:1920px){
   #root{
     width: 50vw;
     height: 112vh;
@@ -80,4 +96,4 @@ a{
     width: 84%;
     height: 84%;
     margin-left: 19rem;}
-}
+} */

@@ -8,7 +8,7 @@ body{
     flex-direction: column;
 }
 #root{
-  margin-top: 20px;
+  margin-top: 70px;
 }
 .container{
   display: flex;
@@ -70,12 +70,17 @@ form .email , .password{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 form button{
-  background: var(--menu);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  width: 10rem;
-  height: 5vh;
-  color: white;
+    gap: 10px;
+    background: var(--menu);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    padding: 1px;
+    width: 13rem;
+    height: 6vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #termsUse {
   background: var(--menu);
@@ -105,7 +110,7 @@ form button{
   font-size: 1rem;
   color: white;
 }
-#erro{
+#error-message{
   width: 40vw;
   height: 3vh;
   text-align: center;
