@@ -40,13 +40,12 @@ export const timeline = () => {
 
   btnPost.addEventListener('click', async (e) => {
     e.preventDefault();
-    const errorMessage = message.value; 
+    const errorMessage = message.value;
     if (errorMessage === '' || !errorMessage) {
-      feedbackError.classList.add('error'); 
+      feedbackError.classList.add('error');
       feedbackError.innerHTML = 'Campos obrigatórios!';
     } else {
       addPosts(errorMessage, authentication.currentUser.email).then((id) => {
- 
         const date = new Date().toLocaleString('pt-br');
         const item = {
           userEmail: authentication.currentUser.email,
