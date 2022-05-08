@@ -21,7 +21,7 @@
 
 ---
 
-Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://pt.wikipedia.org/wiki/Empanada), que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/SAP007-social-network/">AQUI</a>
+Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://natalieiss.github.io/SAP007-social-network/), que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/SAP007-social-network/">AQUI</a>
 
 ---
 
@@ -165,19 +165,14 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ### Protótipo de baixa fidelidade
 
-Então depois disso fizemos o protótipo de alta fidelidade no
-figma, que possibilitou a simulação do resultado da aplicação. Nossa intenção foi fazer uma interface simples, amigável e escolhemos cores que lembrasse o meio ambiente. E este foi o resultado final da tela de cadastro versão desktop e versão mobile ...
+Abaixo o protótipo de alta fidelidade da página home versão mobile que foi desenhado na ferramenta
+figma, que possibilitou a simulação do resultado da aplicação. Nossa intenção foi fazer uma interface simples, amigável e escolhemos cores que lembrasse o meio ambiente.
 
-
-## ![alta fidelidade](./src/img/img-readme/cadastro.png)
-
-
-## ![alta fidelidade](./src/img/img-readme/cadastro.png)
-
+## ![alta fidelidade](./src/img/img-readme/home-mobile.png)
 
 Paleta de cores
 
-## ![alta fidelidade](./src/img/img-readme/paleta.png)
+## ![cores](./src/img/img-readme/paleta.png)
 
 ---
 

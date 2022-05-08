@@ -1,8 +1,12 @@
-@import '../Styles/reset-default.css';
+
 @import '../Styles/Variables.Css';
-#style-footer{
- display: flex;
- text-align: center;
- justify-content:center;
- align-items: center;
+.style-footer{
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 5%;
+  font-size: 1rem;
 }
