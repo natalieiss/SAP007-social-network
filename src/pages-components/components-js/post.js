@@ -7,29 +7,30 @@ export function structuresPost(item) {
   const containerPost = document.createElement('div');
   const checksUser = item.userEmail === authentication.currentUser.email;
   const templatePosts = `
-    <div class="post-div">
+    <div class='post-div'>
   <div>
 
   ${
   checksUser
     ? `
 
-  <div class="btns">
-  <button id="btn-edit" class="btn-edit"><img class="icon-edit" src="./img/bi_pencil-fill.svg">Editar</button>
-  <button id="btn-delete" class="btn-del"><img class="icon-bin" src="./img/delete.png">Excluir</button>
+  <div class='btns'>
+  <button id='btn-edit' class='btn-edit'><img class='icon-edit' src='./img/bi_pencil-fill.svg'>Editar</button>
+  <button id='btn-delete' class='btn-del'><img class='icon-bin' src="./img/delete.png">Excluir</button>
   </div>`
     : ''
 }
-  <div class="user-info">
-      <p class="user-email">${item.userEmail}</p>
+  <div class='user-info'>
+      <p class='user-email'>${item.userEmail}</p>
     </div>
-    <div class="items-organization">
-      <p class="info-date">${item.date}</p>
+    <div class='items-organization'>
+      <p class='info-date'>${item.date}</p>
     </div>
-      <textarea id="message" class='message' maxlength="200" disabled>${item.message
+      <textarea id='message' class='message' maxlength='200' disabled>${
+  item.message
 }</textarea>
-        <div class="div-likes">
-       <button id="btn-like" class="btn-like"><img class="like-icon" src="./img/flat-color-icons_like.svg"/></button><p id="like" class="likes">${
+        <div class='div-likes'>
+       <button id='btn-like' class='btn-like'><img class='like-icon' src='./img/flat-color-icons_like.svg'/></button><p id='like' class='likes'>${
   item.likes.length
 }</p>
       </div>

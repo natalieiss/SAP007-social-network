@@ -35,7 +35,7 @@ textarea{
   color:#ffffff;
   font-size: 1rem;
   padding:13px;
-  background-color: #53AC59;
+  background-color: #156d17;
   resize: none;
   text-align: center;
 }
@@ -135,10 +135,8 @@ textarea{
 
 #btn-delete, #btn-edit{
   background-color: #1C232E;
-  color: #dadada;
   padding: 10px;
   border-radius:10px;
-  margin: 1rem;
 }
 button img{
   width: 30px;
@@ -225,8 +223,11 @@ button img{
   transition: 1s;
 
 }
-
-
+.user-email,.info-date{
+  font-size: 1rem;
+  text-align: center;
+  margin: 3%;
+}
 
 @media only screen and (max-width: 479px){
   textarea{
@@ -241,38 +242,5 @@ button img{
     width: 18vw;
     height: 5vh;
     top: 38px
-   }.area-post{
-     margin-top: 215px;
    }
-}
-.user-email,.info-date{
-  font-size: 1rem;
-  text-align: center;
-  margin: 3%;
-}
-
-@media (min-width:768px) and (max-width:900px) {
- .style-header{
-  margin-top: 85rem;
-}.area-post{
-  margin-top: 0px;
-}#post-and-profile {
- margin-top:0px;
-  
-}.container-geral{
-  margin-top: 4rem;
-}
-}
-
-@media (min-width:901px) and (max-width:1024px) {
-
-.style-header{
-  margin-top:100rem;
-}#textpost {
-  width: 75%;
-  height: 28rem;
-}textarea {
-  width: 35rem;
-  height: 17rem;
- }
 }

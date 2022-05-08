@@ -19,7 +19,7 @@ export const timeline = () => {
   <span id='feedback' class='feedback'></span>
   <div id='post-and-profile'>
     <section class='area-post'>
-      <textarea  id='textpost'class='message'  maxlength='300' rows='10' placeholder='o que você está pensando?'></textarea> 
+      <textarea  id='textpost'class='message'  maxlength='300' rows='10' placeholder='Vamos melhorar o planeta terra hoje? Digite aqui a sua mensagem.'></textarea> 
       <button  id='btn-post' class='btn-post'>Postar</button>
       </section>
   </div>

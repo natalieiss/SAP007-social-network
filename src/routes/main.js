@@ -8,6 +8,7 @@ import { stateVerification } from '../firebase/firebaseauth.js';
 
 const main = document.querySelector('#root');
 const render = () => {
+  main.innerHTML = '';
   switch (window.location.hash) {
     case '#home':
       main.appendChild(home());
@@ -33,7 +34,6 @@ const render = () => {
   }
 };
 window.addEventListener('hashchange', () => {
-  main.innerHTML = '';
   render();
 });
 

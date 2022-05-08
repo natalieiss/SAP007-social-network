@@ -1,13 +1,5 @@
 @import '../pages-components/Styles/Variables.Css';
 
-body{
-    background-color: var( --background-color) ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .container{
   display: flex;
   justify-content: center;
@@ -52,10 +44,6 @@ body{
     flex-direction: column;
     row-gap: 10px;
   }
-a{
-  text-decoration: none;
-  color:var(--font-color);
-}
 
 form .email , .password{
   background: rgba(74, 90, 116, 0.5);
@@ -113,6 +101,9 @@ form button{
   height: 3vh;
   text-align: center;
   color: var(--font-color-error);
+}
+.link-login{
+  text-decoration: underline;
 }
 @media only screen and (max-width: 812px){
   #content-register{

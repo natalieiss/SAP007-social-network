@@ -1,5 +1,6 @@
 
 @import '../Styles/Variables.Css';
+
 .style-footer{
   display: flex;
   text-align: center;
@@ -8,5 +9,12 @@
   justify-content: center;
   color: white;
   height: 5%;
-  font-size: 1rem;
+}
+.authors{
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 768px){
+  .authors{
+   font-size: 1.3rem;
+}
 }

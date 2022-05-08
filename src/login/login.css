@@ -23,8 +23,8 @@ body {
     gap: 22px;
     padding-bottom: 20px;
 }
-a{
-  text-decoration: none;
+.signup{
+  text-decoration:underline;
   color:var(--font-color);
 }
 .paragraph{
@@ -48,8 +48,8 @@ a{
   background: rgba(74, 90, 116, 0.5);
   color: var(--font-color);
   border-color:var(--background-color) ;
-  width: 10rem;
-  height: 4vh;
+  width: 14rem;
+  height: 6vh;
   border-radius: 5px;
   padding-left: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -62,19 +62,10 @@ a{
  }
 
 
-@media  ( min-width:500px) and (max-width:700px){
-  /* .form-login{
-    width: 73%;
-  }*/
+@media  ( min-width:500px) {
   .input-users { 
-    width: 10rem;}
-    .btn-submit{
-      width: 10rem;
-    }.btn-google{
-      width: 10rem;
-   
+   font-size: 1.3rem;}
     }
-}
 @media only screen and (max-width: 406px){
   .form-login {
     width: 17rem;
@@ -84,16 +75,4 @@ a{
 }
 
 
-/* @media  ( min-width:701px) and (max-width:1920px){
-  #root{
-    width: 50vw;
-    height: 112vh;
-}.form-login {
-  width: 100%;
-  margin-left: 7rem;
-  padding: 40px;
-  }.container-login {
-    width: 84%;
-    height: 84%;
-    margin-left: 19rem;}
-} */
+
