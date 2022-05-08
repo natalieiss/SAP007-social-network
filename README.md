@@ -13,9 +13,12 @@
 
 ## 1. Introdução
 
-3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
 
-![rede social](./src/img/img-readme/cadastro.png)
+![rede social](./src/img/eco_work_planet_Logotipo-removebg-preview%201.png)
+
+<h2>Eco Work Planet</h2>
+
+3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
 
 ## 2. Resumo do projeto
 
