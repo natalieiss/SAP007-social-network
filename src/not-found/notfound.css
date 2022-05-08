@@ -27,14 +27,14 @@ a{
 .name-page{
   text-align: center;
 }
-.logo {
+/* .logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
   margin-bottom: 2rem;
 
-}
+} */
 .error-404{
   font-size: 2.5rem;
   margin-top: 7rem;
