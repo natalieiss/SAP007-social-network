@@ -35,7 +35,7 @@ textarea{
   color:#ffffff;
   font-size: 1rem;
   padding:13px;
-  background-color: #53AC59;
+  background-color: #156d17;
   resize: none;
   text-align: center;
 }
@@ -223,8 +223,11 @@ button img{
   transition: 1s;
 
 }
-
-
+.user-email,.info-date{
+  font-size: 1rem;
+  text-align: center;
+  margin: 3%;
+}
 
 @media only screen and (max-width: 479px){
   textarea{
