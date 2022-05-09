@@ -9,7 +9,7 @@ body{
   margin-top: 2rem;
 }
 .container-feed{
-  margin-top: 118rem;
+  margin-top: 170rem;
 }
 .area-post{
 box-sizing: border-box;
@@ -231,14 +231,16 @@ button img{
   margin: 3%;
 }
 
-@media only screen and (max-width: 479px){
+@media only screen and (max-width: 621px){
   textarea{
       width: 52vw;
       height: 29vh;
   }
-  .container-geral{
-    margin-top: 10rem
-  }
+ 
+    .container-feed{
+      margin-top: 214rem;
+    }
+  
   #info-user button {
     right: 7px;
     width: 18vw;
