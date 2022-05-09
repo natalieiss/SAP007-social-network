@@ -11,9 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  margin-top: 77px;
+
 }
 .container-login{
   display: flex;

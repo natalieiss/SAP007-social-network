@@ -7,7 +7,7 @@ import { componentFooter } from '../pages-components/components-js/footer.js';
 
 export const timeline = () => {
   const feed = document.createElement('div');
-
+  feed.classList.add('container-feed')
   const templateFeed = `
  
   <main class='container-geral'>
