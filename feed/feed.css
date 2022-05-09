@@ -6,8 +6,10 @@ body{
 .container-geral{
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 10rem;
+  margin-top: 2rem;
+}
+.container-feed{
+  margin-top: 118rem;
 }
 .area-post{
 box-sizing: border-box;
@@ -235,7 +237,7 @@ button img{
       height: 29vh;
   }
   .container-geral{
-    margin-top: 40rem;
+    margin-top: 10rem
   }
   #info-user button {
     right: 7px;
