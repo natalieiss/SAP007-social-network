@@ -18,13 +18,13 @@
 
 <h2>Eco Work Planet</h2>
 
-3° Projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinha o objetivo de desenvolver uma rede social, e assim construímos uma [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] (com mais de uma tela/ página) na qual seja possível ler e escrever dados.
+Terceiro projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinhamos o objetivo de desenvolver uma rede social de tema livre utilizando a modalidade de [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] que possuísse mais de uma tela ou página e que fosse possível ler e escrever dados.
 
 ## 2. Resumo do projeto
 
 ---
 
-Com tantos acontecimentos como, aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, diversas as pessoas e empresas estão mais preocupadas com o meio ambiente e com a forma que estamos vivendo, para evitar e acabar com catástrofes naturais que são resultantes da ação dos próprios humanos. A partir disso surgiu a ideia de fazer a [Eco Work Planet](https://natalieiss.github.io/SAP007-social-network/), que tem como objetivo principal ser uma rede social para pessoas interessadas no assunto, levantar o debate sobre assuntos voltados a vida sustentável, como alimentação sustentável, descarte adequado do lixo, proteção aos animais, entre outros assuntos ligados ao tema.Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/SAP007-social-network/">AQUI</a>
+Diante de tantos acontecimentos em grande escala como por exemplo: aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, optamos por escolher esse tema de grande relevância para os dias atuais. Assim como diversas pessoas e empresas nós também nos preocupamos  com o meio ambiente e com a forma que estamos vivendo e sentimos que temos a obrigação de contribuir com a sociedade e o meio ambiente e assim tentar diminuir o impacto que nossas ações vem causando no meio ambiente e, desta forma, reduzir e evitar catástrofes naturais e contribuir com nosso ecossistema. A partir dessa reflexão surgiu a a [Eco Work Planet](https://natalieiss.github.io/SAP007-social-network/) com o objetivo principal de ser uma rede social para dar uma maior visibilidade a ONGs gerando uma rede de apoio mútuo entre pessoas interessadas em contribuir com a sociedade e meio ambiente. Também é um espaço para levantar o debate sobre assuntos voltados a uma vida sustentável, descarte consciente de lixo, proteção aos animais entre outros assuntos ligados ao tema. Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/SAP007-social-network/">AQUI</a>
 
 ---
 
