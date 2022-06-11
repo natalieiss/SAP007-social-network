@@ -2,14 +2,15 @@
 
 ## Índice
 
-- [1. Introdução](#1-introdução)
-- [2. Resumo do projeto](#2-resumo-do-projeto)
-- [3.Pesquisa de usuários](#3-pesquisa-de-usuários)
-- [4.Histórias de usuário](#4.histórias-de-usuário)
-- [5. Objetivos de aprendizagem](#5-objetivos-de-aprendizagem)
-- [6.Design](#6-Design)
-- [7. Linguagens e ferramentas utilizadas ](#7-Linguagens-e-ferramentas-utilizadas)
-- [8. Desenvolvedoras](#8-desenvolvedoras)
+- [1. Introdução](#1-Introdução)
+- [2. Resumo do Projeto](#2-Resumo-do-projeto)
+- [3. Futuro do Projeto(#3-Futuro-do-Projeto)
+- [4.Pesquisa de usuários](#4-Pesquisa-de-usuários)
+- [5.Histórias de usuário](#5-histórias-de-usuário)
+- [6. Objetivos de aprendizagem](#6-objetivos-de-aprendizagem)
+- [7.Design](#7-Design)
+- [8. Linguagens e ferramentas utilizadas ](#8-Linguagens-e-ferramentas-utilizadas)
+- [9. Desenvolvedoras](#9-desenvolvedoras)
 
 ## 1. Introdução
 
@@ -28,7 +29,16 @@ Diante de tantos acontecimentos em grande escala, como por exemplo: aquecimento 
 
 ---
 
-## 3. Pesquisa de usuários
+## 3. Futuro do Projeto
+
+---
+
+Para as próximas implementações (v2.0) iremos melhorar a segurança de nossos usuários acrescentando uma Política de Privacidade e Cookies dentre outras melhorias visando adequar nosso projeto ao disposto na Lei Geral de Proteção de Dados Pessoais (LGPD). 
+Também pensamos em melhorar a acessibilidade da aplicação web para as pessoas com deficiência, como por exemplo, o acrescimo de uma opção de áudio descritivo que possibilitará aos usuários escutar a descrição dos comentários que escolherem dentre várias outras implementações que pensamos para aumentar a inclusão e acessibilidade em nossa aplicação web.
+
+---
+
+## 4. Pesquisa de usuários
 
 ## Foi realizada uma [pesquisa](https://docs.google.com/forms/d/13vHIxH0u_qzq2e3zOH9dK6DRGRPDYpaiPJdlIinBNKo/edit#responses) com 10 pessoas e esses foram os resultados:
 
@@ -66,13 +76,13 @@ A informação de como podemos cuidar do nosso Meio-Ambiente chega fácil até v
 
 ---
 
-## 4.Histórias de usuário
+## 5.Histórias de usuário
 
 Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ## ![histórias](./src/img/img-readme/historias.png)
 
-## 3. Objetivos de aprendizagem
+## 6. Objetivos de aprendizagem
 
 ### HTML
 
@@ -162,7 +172,7 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ---
 
-## 6. Design
+## 7. Design
 
 ## Desenho de interface do usuário
 
@@ -179,7 +189,7 @@ Paleta de cores
 
 ---
 
-### 7. 💻Linguagens e ferramentas utilizadas
+### 8. 💻Linguagens e ferramentas utilizadas
 
 <article>
 
@@ -197,7 +207,7 @@ Paleta de cores
 
 ---
 
-## 8. Desenvolvedoras
+## 9. Desenvolvedoras
 
 <table>
   <tr>
