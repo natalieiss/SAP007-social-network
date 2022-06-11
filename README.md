@@ -4,7 +4,7 @@
 
 - [1. Introdução](#1-Introdução)
 - [2. Resumo do Projeto](#2-Resumo-do-projeto)
-- [3. Futuro do Projeto(#3-Futuro-do-Projeto)
+- [3. Futuro do Projeto](#3-Futuro-do-Projeto)
 - [4.Pesquisa de usuários](#4-Pesquisa-de-usuários)
 - [5.Histórias de usuário](#5-histórias-de-usuário)
 - [6. Objetivos de aprendizagem](#6-objetivos-de-aprendizagem)
