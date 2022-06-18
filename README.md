@@ -22,9 +22,8 @@
 
 Terceiro projeto desenvolvido no bootcamp de front-end da Laboratoria, neste projeto nós tinhamos o objetivo de desenvolver uma rede social de tema livre utilizando a modalidade de [Single-page Application(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)[_responsiva_] que possuísse mais de uma tela ou página e que fosse possível ler e escrever dados.
 
-## 2. Resumo do projeto
-
 ---
+## 2. Resumo do projeto
 
 Diante de tantos acontecimentos em grande escala, como por exemplo: aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, optamos por escolher este tema de grande relevância para os dias atuais. Assim como diversas pessoas e empresas nós também nos preocupamos com o meio ambiente, com a forma que estamos vivendo e sentimos que temos a obrigação de contribuir tanto para com a sociedade quanto para com o ecossistema. Nos conscientizamos em reduzir ou evitar os efeitos nocivos ocasionados pela atuação humana. A partir dessa reflexão surgiu a [Eco Work Planet](https://natalieiss.github.io/Terceiro-Projeto-Social-Network) com o objetivo principal de ser uma rede social para dar uma maior visibilidade a ONGs gerando uma rede de apoio mútuo entre pessoas interessadas em contribuir com a sociedade e meio ambiente. Também é um espaço para levantar o debate sobre assuntos voltados a uma vida sustentável, descarte consciente de lixo, proteção aos animais entre outros assuntos ligados ao tema. Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/Terceiro-Projeto-Social-Network/">aqui</a>.
 
@@ -35,8 +34,6 @@ Diante de tantos acontecimentos em grande escala, como por exemplo: aquecimento 
 ---
 
 ## 3. Futuro do Projeto
-
----
 
 Para as próximas implementações (v2.0) iremos melhorar a segurança de nossos usuários acrescentando uma Política de Privacidade e Cookies dentre outras melhorias visando adequar nosso projeto ao disposto na Lei Geral de Proteção de Dados Pessoais (LGPD). 
 Também pensamos em melhorar a acessibilidade da aplicação web para as pessoas com deficiência, como por exemplo, o acrescimo de uma opção de áudio descritivo que possibilitará aos usuários escutar a descrição dos comentários que escolherem dentre várias outras implementações que pensamos para aumentar a inclusão e acessibilidade em nossa aplicação web.
@@ -108,6 +105,7 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ## ![histórias](./src/img/img-readme/historias.png)
 
+---
 ## 7. Objetivos de aprendizagem
 
 ### HTML
