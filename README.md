@@ -5,12 +5,13 @@
 - [1. Introdução](#1-Introdução)
 - [2. Resumo do Projeto](#2-Resumo-do-projeto)
 - [3. Futuro do Projeto](#3-Futuro-do-Projeto)
-- [4.Pesquisa de usuários](#4-Pesquisa-de-usuários)
-- [5.Histórias de usuário](#5-histórias-de-usuário)
-- [6. Objetivos de aprendizagem](#6-objetivos-de-aprendizagem)
-- [7.Design](#7-Design)
-- [8. Linguagens e ferramentas utilizadas ](#8-Linguagens-e-ferramentas-utilizadas)
-- [9. Desenvolvedoras](#9-desenvolvedoras)
+- [4. Demonstrações da Aplicação Web](#4-Demonstrações-da-Aplicação-Web)
+- [5.Pesquisa de usuários](#5-Pesquisa-de-usuários)
+- [6.Histórias de usuário](#6-histórias-de-usuário)
+- [7. Objetivos de aprendizagem](#7-objetivos-de-aprendizagem)
+- [8.Design](#8-Design)
+- [9. Linguagens e ferramentas utilizadas ](#9-Linguagens-e-ferramentas-utilizadas)
+- [10. Desenvolvedoras](#10-desenvolvedoras)
 
 ## 1. Introdução
 
@@ -27,6 +28,10 @@ Terceiro projeto desenvolvido no bootcamp de front-end da Laboratoria, neste pro
 
 Diante de tantos acontecimentos em grande escala, como por exemplo: aquecimento global, queimadas, derretimento de geleiras, calor excessivo, frio excessivo e muitos outros fatores naturais, optamos por escolher este tema de grande relevância para os dias atuais. Assim como diversas pessoas e empresas nós também nos preocupamos com o meio ambiente, com a forma que estamos vivendo e sentimos que temos a obrigação de contribuir tanto para com a sociedade quanto para com o ecossistema. Nos conscientizamos em reduzir ou evitar os efeitos nocivos ocasionados pela atuação humana. A partir dessa reflexão surgiu a [Eco Work Planet](https://natalieiss.github.io/Terceiro-Projeto-Social-Network) com o objetivo principal de ser uma rede social para dar uma maior visibilidade a ONGs gerando uma rede de apoio mútuo entre pessoas interessadas em contribuir com a sociedade e meio ambiente. Também é um espaço para levantar o debate sobre assuntos voltados a uma vida sustentável, descarte consciente de lixo, proteção aos animais entre outros assuntos ligados ao tema. Você pode acessar a aplicação clicando <a href="https://natalieiss.github.io/Terceiro-Projeto-Social-Network/">aqui</a>.
 
+<p align="center">Para assistir o vídeo da Eco-Work Planet, clique na imagem abaixo:</p>
+
+[![Watch the video](https://img.youtube.com/vi/0cYiZ_EOIiY/0.jpg)](https://www.youtube.com/watch?v=0cYiZ_EOIiY)
+
 ---
 
 ## 3. Futuro do Projeto
@@ -38,7 +43,28 @@ Também pensamos em melhorar a acessibilidade da aplicação web para as pessoas
 
 ---
 
-## 4. Pesquisa de usuários
+## 4. Demonstrações da Aplicação Web
+
+<p align="center">Versão Web</p>
+<p align="center">
+  <img width="600" height="255" src="./src/assets/readme/web1.gif"/>
+  <img width="600" height="229" src="./src/assets/readme/web2.gif"/>
+  <img width="600" height="229" src="./src/assets/readme/web3.gif"/>
+  <img width="600" height="229" src="./src/assets/readme/web4.gif"/>
+</p>
+<p align="center">Versão Tablet</p>
+<p align="center">
+  <img width="600" height="450" src="./src/assets/readme/tablet2.gif"/>
+  <img width="362" height="480" src="./src/assets/readme/tablet1.gif"/>
+</p>
+<p align="center">Versão Mobile</p>
+<p align="center">
+  <img width="320" height="560" src="./src/assets/readme/mobile.gif"/>
+</p>
+
+---
+
+## 5. Pesquisa de usuários
 
 ## Foi realizada uma [pesquisa](https://docs.google.com/forms/d/13vHIxH0u_qzq2e3zOH9dK6DRGRPDYpaiPJdlIinBNKo/edit#responses) com 10 pessoas e esses foram os resultados:
 
@@ -76,13 +102,13 @@ A informação de como podemos cuidar do nosso Meio-Ambiente chega fácil até v
 
 ---
 
-## 5.Histórias de usuário
+## 6.Histórias de usuário
 
 Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ## ![histórias](./src/img/img-readme/historias.png)
 
-## 6. Objetivos de aprendizagem
+## 7. Objetivos de aprendizagem
 
 ### HTML
 
@@ -172,7 +198,7 @@ Com base nas pesquisas chegamos nas seguintes histórias de usuários:
 
 ---
 
-## 7. Design
+## 8. Design
 
 ## Desenho de interface do usuário
 
@@ -189,7 +215,7 @@ Paleta de cores
 
 ---
 
-### 8. 💻Linguagens e ferramentas utilizadas
+### 9. 💻Linguagens e ferramentas utilizadas
 
 <article>
 
@@ -207,7 +233,7 @@ Paleta de cores
 
 ---
 
-## 9. Desenvolvedoras
+## 10. Desenvolvedoras
 
 <table>
   <tr>
