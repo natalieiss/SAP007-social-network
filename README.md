@@ -37,7 +37,7 @@ Diante de tantos acontecimentos em grande escala, como por exemplo: aquecimento 
 
 Para as próximas implementações (v2.0) iremos melhorar a segurança de nossos usuários acrescentando uma Política de Privacidade e Cookies dentre outras melhorias visando adequar nosso projeto ao disposto na Lei Geral de Proteção de Dados Pessoais (LGPD). 
 Também pensamos em melhorar a acessibilidade da aplicação web para as pessoas com deficiência, como por exemplo, o acrescimo de uma opção de áudio descritivo que possibilitará aos usuários escutar a descrição dos comentários que escolherem dentre várias outras implementações que pensamos para aumentar a inclusão e acessibilidade em nossa aplicação web.
-Realizaremos um refatoramento do projeto todo bem como implementações na estilização.
+Realizaremos um refatoramento de todo o projeto e implementações na estilização.
 
 ---
 
