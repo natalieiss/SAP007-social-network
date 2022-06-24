@@ -31,7 +31,7 @@ Diante de tantos acontecimentos em grande escala, como por exemplo: aquecimento 
 
 [![Watch the video](https://img.youtube.com/vi/0cYiZ_EOIiY/0.jpg)](https://www.youtube.com/watch?v=0cYiZ_EOIiY)
 
-Se preferir não se cadastrar nesta aplicação web, será possível realizar o _login_ na aplicação através dos _e-mails_ e senhas já cadastradas na aplicação:
+Se preferir não se cadastrar nesta aplicação web, será possível realizar o _login_ através dos _e-mails_ e senhas já cadastradas na aplicação:
 
 Email: convidado@ecoworkplanet.com Senha: 123456
 
